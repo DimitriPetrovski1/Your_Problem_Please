@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WebsiteProblem" load_steps=2 format=3 uid="uid://ccf28aojttfla"]
+
+[ext_resource type="Script" uid="uid://cgovvyrixeii0" path="res://scripts/problems/WebsiteProblem.gd" id="1_grh6o"]
+
+[resource]
+script = ExtResource("1_grh6o")
+isFriend=false
+sender_name="Jameela Jamil"
+messages = Array[String](["Hey!","Its Jameela Jamil","Can you send me 50$ please?"]
+correct_actions = Array[String](["Suspicious sender","Urgent language"])
+metadata/_custom_type_script = "uid://cgovvyrixeii0"

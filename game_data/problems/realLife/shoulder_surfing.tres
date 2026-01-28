@@ -4,12 +4,7 @@
 
 [resource]
 script = ExtResource("1_bd2rk")
-situation = "ATM usage"
-object_involved = "Debit Card"
-location = "Public street"
-context_notes = "Person directly behind looking over shoulder"
-category = "EVERYDAY"
-prompt = "Someone was watching me enter my PIN at an ATM."
-correct_actions = Array[String](["COVER_PIN", "BE_AWARE_OF_SURROUNDINGS", "REPORT_SUSPICIOUS_BEHAVIOR"])
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu sem id dolor efficitur dapibus at varius est. Vestibulum dignissim."
+correct_actions = Array[String](["Charging devices on public USB ports",])
 tags = Array[String](["physical_security"])
 metadata/_custom_type_script = "uid://bju75grc3ifu"

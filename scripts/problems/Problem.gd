@@ -1,7 +1,8 @@
-﻿extends Resource
-class_name Problem
+﻿@abstract 
+class_name  Problem
+extends Resource
 
-@export var category: String
-@export var prompt: String               # customer speech description
-@export var correct_actions: Array[String] = []   # multiple valid answers
-@export var tags: Array[String] = []     # optional metadata
+@abstract func get_category() -> String
+@abstract func get_short_description() -> String
+@abstract func get_possible_choices() -> Array[String]
+@abstract func get_correct_choices() -> Array[String]

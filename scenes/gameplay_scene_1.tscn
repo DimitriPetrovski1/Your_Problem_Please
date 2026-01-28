@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5ktasytww183"]
 
-[ext_resource type="Texture2D" uid="uid://d0aig61ou6ba2" path="res://assets/Desk with lamp (1).png" id="1_ma2vo"]
+[ext_resource type="Texture2D" uid="uid://d0aig61ou6ba2" path="res://assets/misc_sprites/Desk with lamp (1).png" id="1_ma2vo"]
 
 [node name="GameplayScene1" type="Control"]
 layout_mode = 3

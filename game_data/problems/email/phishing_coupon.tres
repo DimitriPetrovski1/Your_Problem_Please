@@ -6,10 +6,5 @@
 script = ExtResource("1_f3056")
 sender = "promotions@freegiftcards.shop"
 subject = "Congratulations! Claim your Gift Card"
-body_preview = "Click here to redeem your $100 gift card!"
-suspicious_flags = Array[String](["too_good_to_be_true", "unknown_sender", "url_mismatch"])
-category = "EMAIL"
-prompt = "I got an email saying I won a gift card if I click a link."
-correct_actions = Array[String](["WARN_PHISHING", "DO_NOT_CLICK_LINK", "VERIFY_SENDER"])
-tags = Array[String](["beginner"])
-metadata/_custom_type_script = "uid://ceqlone0fhltc"
+body = "Click here to redeem your $100 gift card!"
+correct_choices = Array[String](["Too good to be true", "Suspicious sender"])
