@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=39 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://coglasllogq5j" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="Texture2D" uid="uid://cjd7tfamtn2m3" path="res://assets/UI/Top Left Panel - Manual.png" id="1_shio3"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b1eru37a53nhj" path="res://assets/UI/Right Panel - Message.png" id="14_ujqrd"]
 [ext_resource type="Script" uid="uid://boxa3gm7bbwki" path="res://scenes/real_life_node.gd" id="15_5my5b"]
 [ext_resource type="Texture2D" uid="uid://ddq4tfyv82o4j" path="res://assets/UI/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
+[ext_resource type="Texture2D" uid="uid://cfsdqobfvlw7q" path="res://assets/UI/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qgjuv"]
 
@@ -40,6 +41,28 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi01h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfo66"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbj1o"]
+bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3fr3"]
+bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9372549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q73r7"]
+bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lovhm"]
+bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cuma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_unebn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjgxn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjgy3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypkrs"]
 
 [node name="GameplayScene1" type="Control"]
 layout_mode = 3
@@ -93,6 +116,10 @@ offset_top = 155.0
 offset_right = 167.0
 offset_bottom = 243.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
 theme_override_font_sizes/font_size = 28
 text = "Emails"
 
@@ -103,6 +130,10 @@ offset_top = 153.0
 offset_right = 339.0
 offset_bottom = 238.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
 theme_override_font_sizes/font_size = 28
 text = "Messages"
 
@@ -113,6 +144,10 @@ offset_top = 154.0
 offset_right = 515.0
 offset_bottom = 239.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
 theme_override_font_sizes/font_size = 28
 text = "Real Life"
 
@@ -439,6 +474,78 @@ offset_right = 400.0
 offset_bottom = 202.0
 text = "Submit choices"
 
+[node name="ManualPopupCanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+
+[node name="BackgroundButton" type="Button" parent="ManualPopupCanvasLayer"]
+offset_right = 1151.0
+offset_bottom = 650.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbj1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k3fr3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q73r7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lovhm")
+
+[node name="MenuBackgroundTR" type="TextureRect" parent="ManualPopupCanvasLayer/BackgroundButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.04688
+offset_top = -294.69647
+offset_right = 245.04688
+offset_bottom = 294.69647
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("17_cbj1o")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.041
+anchor_bottom = 0.034
+offset_left = 19.546875
+offset_top = 88.69647
+offset_right = 449.45303
+offset_bottom = 558.6571
+
+[node name="VScrollBar" type="VScrollBar" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_8cuma")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_unebn")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_rjgxn")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_wjgy3")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_ypkrs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer/VScrollBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+
+[node name="ManualLabel" type="Label" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR"]
+layout_mode = 0
+offset_left = 15.546875
+offset_top = 11.696472
+offset_right = 475.54688
+offset_bottom = 71.69647
+theme_override_font_sizes/font_size = 30
+text = "Email Manual"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/LoadProblemButton" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newProblem" from="." to="." method="_on_new_problem"]
@@ -446,6 +553,9 @@ text = "Submit choices"
 [connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/EmailsMenuButton" to="." method="_on_emails_menu_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/MessagesMenuButton" to="." method="_on_messages_menu_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/RealLifeMenuButton" to="." method="_on_real_life_menu_button_pressed"]
 [connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/LoadProblemButton" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_load_problem_button_show_problem"]
 [connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/LoadProblemButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_load_problem_button_show_problem"]
 [connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/LoadProblemButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_load_problem_button_show_problem"]
@@ -455,3 +565,4 @@ text = "Submit choices"
 [connection signal="pressed" from="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_messages_submit_solution_button_pressed"]
 [connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
 [connection signal="pressed" from="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
+[connection signal="pressed" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_pressed"]
