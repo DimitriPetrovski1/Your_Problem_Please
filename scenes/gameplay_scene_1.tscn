@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=41 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="Texture2D" uid="uid://cjd7tfamtn2m3" path="res://assets/UI/Top Left Panel - Manual.png" id="1_shio3"]
@@ -11,11 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://dwympexmcckpi" path="res://assets/characters/Single_Kid_Sprite_1.png" id="6_amqq1"]
 [ext_resource type="Script" uid="uid://ckl081hts2jol" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
 [ext_resource type="Script" uid="uid://b81f7cnxwrxmd" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
+[ext_resource type="Script" uid="uid://cdqs5yiregl0s" path="res://scenes/texture_rect.gd" id="7_lovhm"]
+[ext_resource type="Texture2D" uid="uid://mgdljy4ydrat" path="res://assets/UI/Buttons/Blue Button.png" id="8_q73r7"]
 [ext_resource type="Script" uid="uid://lvm4l80hyvcb" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
 [ext_resource type="Script" uid="uid://b8nlq2sjpo1vc" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://47eax1b8dlr3" path="res://scenes/messages_node.gd" id="13_1sg7f"]
 [ext_resource type="Texture2D" uid="uid://b1eru37a53nhj" path="res://assets/UI/Right Panel - Message.png" id="14_ujqrd"]
 [ext_resource type="Script" uid="uid://jualthnwyhwc" path="res://scenes/real_life_node.gd" id="15_5my5b"]
+[ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="15_lovhm"]
 [ext_resource type="Texture2D" uid="uid://ddq4tfyv82o4j" path="res://assets/UI/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
 [ext_resource type="Texture2D" uid="uid://cfsdqobfvlw7q" path="res://assets/UI/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
 
@@ -183,15 +186,16 @@ texture = ExtResource("3_vfncy")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
+[node name="TextBubble" type="TextureRect" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
 custom_minimum_size = Vector2(250, 150)
 layout_direction = 4
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 texture = ExtResource("4_vfncy")
+script = ExtResource("7_lovhm")
 
-[node name="TextBubbleText" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect"]
+[node name="TextBubbleText" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
 layout_mode = 1
 offset_left = 10.0
 offset_top = 8.0
@@ -206,16 +210,17 @@ text = "Lorem ipsum Lorem ipsum Lorem ipsum"
 autowrap_mode = 2
 script = ExtResource("6_bnjt7")
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
 layout_mode = 0
 offset_left = 141.99998
 offset_top = 75.0
 offset_right = 234.8
 offset_bottom = 108.0
+texture_normal = ExtResource("8_q73r7")
 stretch_mode = 0
 script = ExtResource("10_yi01h")
 
-[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextureButton"]
+[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -346,6 +351,7 @@ offset_right = 326.5
 offset_bottom = -13.006531
 grow_horizontal = 2
 grow_vertical = 0
+texture_normal = ExtResource("15_lovhm")
 stretch_mode = 0
 
 [node name="EmailSubLabel" type="Label" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel/EmailSubmitSolutionButton"]
@@ -659,18 +665,22 @@ vertical_alignment = 1
 
 [connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newProblem" from="." to="." method="_on_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextureButton" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="submited_answers" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_gameplay_scene_1_submited_answers"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/EmailsMenuButton" to="." method="_on_emails_menu_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/MessagesMenuButton" to="." method="_on_messages_menu_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/RealLifeMenuButton" to="." method="_on_real_life_menu_button_pressed"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextureButton" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_texture_button_show_problem"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextureButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_texture_button_show_problem"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextureButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_texture_button_show_problem"]
-[connection signal="visibility_changed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextureButton" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextureRect/TextBubbleText" method="_on_texture_button_visibility_changed"]
+[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_texture_button_show_problem"]
+[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_texture_button_show_problem"]
+[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_texture_button_show_problem"]
+[connection signal="visibility_changed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_texture_button_visibility_changed"]
+[connection signal="character_exited" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="." method="_on_customer_sprite_character_exited"]
+[connection signal="character_stopped" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
+[connection signal="character_stopped" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]
 [connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/EmailNode" to="." method="_on_email_node_submit_selection"]
 [connection signal="pressed" from="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel/EmailSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_email_submit_solution_button_pressed"]
 [connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/MessagesNode" to="." method="_on_messages_node_submit_selection"]

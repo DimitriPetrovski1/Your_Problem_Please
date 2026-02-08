@@ -4,6 +4,7 @@ extends Label
 
 var _elapsed := 0.0
 var _is_typing := false
+var currentProblem = ""
 
 func _ready():
 	visible_characters = 0
@@ -26,9 +27,15 @@ func start_typing(new_text: String):
 	_is_typing = true
 
 func _on_gameplay_scene_1_new_problem(problem: Problem) -> void:
-	start_typing(problem.get_short_description())
-	
+	#start_typing(problem.get_short_description())
+	currentProblem = problem.get_short_description()
+	print(currentProblem)
 
 
 func _on_texture_button_visibility_changed() -> void:
 	pass # Replace with function body.
+
+
+func _on_customer_sprite_character_stopped() -> void:
+	print('stopped moving')
+	start_typing(currentProblem)
