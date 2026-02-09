@@ -5,7 +5,7 @@ var CharacterDB:Array[Texture2D]
 var ProblemDB:Array[Problem]
 signal newProblem(problem:Problem)
 signal newCharacter(characterTexture:Texture2D)
-signal submited_answers
+signal graded_solution
 var currentCharacter:Texture2D = null
 var currentProblem:Problem = null
 @onready var score:int = 0 
@@ -113,21 +113,23 @@ func gradeSolution(solutions:Array[String])->void:
 	
 	score+=newScoreDelta
 	print("new Score:",score)
+
+	
+func _on_customer_sprite_character_exited() -> void:
 	pickCharacter()
 	pickProblem()
 
-
 func _on_email_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
-	submited_answers.emit()
+	graded_solution.emit()
 
 func _on_messages_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
-	submited_answers.emit()
+	graded_solution.emit()
 
 func _on_real_life_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
-	submited_answers.emit()
+	graded_solution.emit()
 
 
 #----------------------Manual popups controls--------------------------
@@ -198,7 +200,3 @@ func _on_real_life_menu_button_pressed() -> void:
 func _on_background_button_button_down() -> void:
 	var canvas = $ManualPopupCanvasLayer
 	canvas.visible = false
-
-
-func _on_customer_sprite_character_exited() -> void:
-	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=42 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="Texture2D" uid="uid://cjd7tfamtn2m3" path="res://assets/UI/Top Left Panel - Manual.png" id="1_shio3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://cdqs5yiregl0s" path="res://scenes/texture_rect.gd" id="7_lovhm"]
 [ext_resource type="Texture2D" uid="uid://mgdljy4ydrat" path="res://assets/UI/Buttons/Blue Button.png" id="8_q73r7"]
 [ext_resource type="Script" uid="uid://lvm4l80hyvcb" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
+[ext_resource type="Script" uid="uid://bj8r0b1re16st" path="res://scenes/bye_button.gd" id="11_cfo66"]
 [ext_resource type="Script" uid="uid://b8nlq2sjpo1vc" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://47eax1b8dlr3" path="res://scenes/messages_node.gd" id="13_1sg7f"]
 [ext_resource type="Texture2D" uid="uid://b1eru37a53nhj" path="res://assets/UI/Right Panel - Message.png" id="14_ujqrd"]
@@ -210,7 +211,7 @@ text = "Lorem ipsum Lorem ipsum Lorem ipsum"
 autowrap_mode = 2
 script = ExtResource("6_bnjt7")
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
+[node name="Checkout Button" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
 layout_mode = 0
 offset_left = 141.99998
 offset_top = 75.0
@@ -220,7 +221,7 @@ texture_normal = ExtResource("8_q73r7")
 stretch_mode = 0
 script = ExtResource("10_yi01h")
 
-[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton"]
+[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -235,6 +236,34 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_k3fr3")
 text = "Checkout"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bye Button" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 70.0
+offset_right = 228.0
+offset_bottom = 110.0
+texture_normal = ExtResource("8_q73r7")
+stretch_mode = 0
+script = ExtResource("11_cfo66")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -10.5
+offset_right = 34.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k3fr3")
+text = "Bye Bye"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -663,21 +692,24 @@ text = "Email Manual"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="graded_solution" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]
 [connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newProblem" from="." to="." method="_on_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="submited_answers" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_gameplay_scene_1_submited_answers"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/EmailsMenuButton" to="." method="_on_emails_menu_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/MessagesMenuButton" to="." method="_on_messages_menu_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/RealLifeMenuButton" to="." method="_on_real_life_menu_button_pressed"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_texture_button_show_problem"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_texture_button_show_problem"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_texture_button_show_problem"]
-[connection signal="visibility_changed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextureButton" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_texture_button_visibility_changed"]
+[connection signal="finished_thank_you_message" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button" method="_on_text_bubble_text_finished_thank_you_message"]
+[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_texture_button_show_problem"]
+[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_texture_button_show_problem"]
+[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_texture_button_show_problem"]
+[connection signal="visibility_changed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_texture_button_visibility_changed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_bye_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_bye_button_pressed"]
 [connection signal="character_exited" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="." method="_on_customer_sprite_character_exited"]
 [connection signal="character_stopped" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
 [connection signal="character_stopped" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]

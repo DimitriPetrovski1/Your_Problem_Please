@@ -72,3 +72,23 @@ func _on_exit_finished() -> void:
 	print("exit finished")
 	character_exited.emit()
 	
+
+
+func _on_bye_button_pressed() -> void:
+	has_arrived = false
+	
+	var tween := create_tween()
+	var viewport_width = get_viewport_rect().size.x
+	var target_exit_position = Vector2(
+		viewport_width + texture.get_width(),
+		position.y
+	)
+	
+	tween.tween_property(
+		self,
+		"position",
+		target_exit_position,
+		enter_duration
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	
+	tween.finished.connect(_on_exit_finished)

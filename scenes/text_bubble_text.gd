@@ -6,6 +6,8 @@ var _elapsed := 0.0
 var _is_typing := false
 var currentProblem = ""
 
+signal finished_thank_you_message
+
 func _ready():
 	visible_characters = 0
 
@@ -19,6 +21,7 @@ func _process(delta):
 	if visible_characters >= text.length():
 		visible_characters = text.length()
 		_is_typing = false
+		
 
 func start_typing(new_text: String):
 	text = new_text
@@ -27,15 +30,13 @@ func start_typing(new_text: String):
 	_is_typing = true
 
 func _on_gameplay_scene_1_new_problem(problem: Problem) -> void:
-	#start_typing(problem.get_short_description())
 	currentProblem = problem.get_short_description()
 	print(currentProblem)
-
-
-func _on_texture_button_visibility_changed() -> void:
-	pass # Replace with function body.
-
 
 func _on_customer_sprite_character_stopped() -> void:
 	print('stopped moving')
 	start_typing(currentProblem)
+
+func _on_gameplay_scene_1_graded_solution() -> void:
+	start_typing("Thank you so much!")
+	finished_thank_you_message.emit()

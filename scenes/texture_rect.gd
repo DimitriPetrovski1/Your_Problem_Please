@@ -11,6 +11,9 @@ func _process(_delta: float) -> void:
 func _on_customer_sprite_character_stopped() -> void:
 	visible = true
 	
-
 func _on_gameplay_scene_1_submited_answers() -> void:
+	visible = false
+
+
+func _on_bye_button_pressed() -> void:
 	visible = false
