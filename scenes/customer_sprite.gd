@@ -68,6 +68,7 @@ func _on_text_bubble_text_bye_message_done() -> void:
 	
 	tween.finished.connect(_on_exit_finished)
 	
+	
 func _on_exit_finished() -> void:
 	print("exit finished")
 	character_exited.emit()

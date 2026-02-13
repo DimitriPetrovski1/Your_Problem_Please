@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjav3hhcrpc3s"]
+
+[ext_resource type="Script" uid="uid://cbf5v4y280uim" path="res://scenes/shop/shop.gd" id="1_3qebd"]
+[ext_resource type="Texture2D" uid="uid://0olwe0cjd7s0" path="res://assets/UI/shop_popup_panel.png" id="1_rktij"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3qebd")
+
+[node name="Background Back Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="Background Back Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -421.0
+offset_top = -344.0
+offset_right = 421.0
+offset_bottom = 344.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rktij")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background Back Button/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -216.0
+offset_right = 400.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Background Back Button" to="." method="_on_color_rect_pressed"]

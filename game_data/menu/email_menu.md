@@ -1,4 +1,4 @@
-﻿# This is the emails menu page
+# This is the emails menu page
 
 The main things to look out for are..
 Ut magna nisi, ullamcorper ac pharetra sit amet, luctus nec lorem. Donec consectetur dictum libero ut efficitur. Donec interdum mattis felis et luctus. Mauris sit amet vulputate ex, nec posuere eros. Duis vitae mauris in enim lacinia rhoncus. Cras augue massa, porttitor ut accumsan at, consequat quis orci. Nulla rutrum venenatis elit, sit amet vulputate lacus pharetra sed. Etiam a ornare elit, et ornare ipsum. Nulla sed lacinia ex, tincidunt faucibus urna. Nulla facilisi. Mauris in diam commodo, placerat lectus ac, convallis massa. Nunc id sapien nulla. Nulla feugiat dolor id ipsum posuere, in semper velit fringilla. Praesent lobortis nisi quis nisl aliquet, ut semper arcu placerat. Praesent et ex eget nisl consequat lacinia.

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://bv0tyhhue4c0m"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_eob4e"]
+[ext_resource type="Texture2D" uid="uid://chvsow57macjr" path="res://assets/rewards/GoldMedal1.png" id="2_22gcb"]
+
+[resource]
+script = ExtResource("1_eob4e")
+id = "0"
+name = "Bronze Trophy 1"
+price = 10
+texture = ExtResource("2_22gcb")
+desk_position = Vector2(20, 20)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
