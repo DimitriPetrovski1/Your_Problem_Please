@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpedxy1v6cfyd"]
+
+[ext_resource type="Texture2D" uid="uid://duw3gbojw64y7" path="res://assets/ads/Burger2AdBanner.png" id="1_k7dgd"]
+[ext_resource type="Script" uid="uid://b6d5w6mxtmgu2" path="res://scenes/minigame/ad_banner.gd" id="2_fvtot"]
+
+[node name="Ad Banner" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_k7dgd")
+script = ExtResource("2_fvtot")

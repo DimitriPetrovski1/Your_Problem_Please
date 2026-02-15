@@ -70,7 +70,8 @@ func _ready():
 		var btn = Button.new()
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER 
-		btn.custom_minimum_size.y = 80 
+		btn.custom_minimum_size.y = 80
+		btn.custom_minimum_size.x = 120
 		btn.set_meta("accessory", accessory)
 		btn.pressed.connect(_on_shop_item_pressed.bind(btn))
 		item_container.add_child(btn)
@@ -108,9 +109,9 @@ func _update_buttons():
 			
 			# UPDATE BUTTON TEXT
 			if accessory.id in ShopGameData.equipped_items:
-				btn.text = "Equipped"
+				btn.text = "Unequip"
 			else:
-				btn.text = "Unequipped"
+				btn.text = "Equip"
 		else:
 			tex_rect.modulate.a = 0.5 # Faded when not owned
 			btn.text = accessory.name + "\n$" + str(accessory.price)

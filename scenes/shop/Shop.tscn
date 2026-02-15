@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cjav3hhcrpc3s"]
 
 [ext_resource type="Script" uid="uid://cbf5v4y280uim" path="res://scenes/shop/shop.gd" id="1_3qebd"]
-[ext_resource type="Texture2D" uid="uid://0olwe0cjd7s0" path="res://assets/UI/shop_popup_panel.png" id="1_rktij"]
+[ext_resource type="Texture2D" uid="uid://0olwe0cjd7s0" path="res://assets/UI/Popup Panels/shop_popup_panel.png" id="1_rktij"]
 [ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_srfm6"]
 [ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="4_xjfbs"]
 
@@ -70,7 +70,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/h_separation = 30
+theme_override_constants/h_separation = 25
 theme_override_constants/v_separation = 10
 columns = 3
 
