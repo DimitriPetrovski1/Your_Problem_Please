@@ -69,3 +69,8 @@ func _on_checkout_button_show_problem() -> void:
 	if currProblem is MessagesProblem:
 		visible = true
 		print("Problem")
+
+
+func _on_open_problem_button() -> void:
+	if currProblem is MessagesProblem:
+		visible = (visible != true)

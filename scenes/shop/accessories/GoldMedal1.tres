@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://bv0tyhhue4c0m"]
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://btoby6wt5go8s"]
 
 [ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_jy5d6"]
 [ext_resource type="Texture2D" uid="uid://chvsow57macjr" path="res://assets/rewards/GoldMedal1.png" id="2_vyau8"]

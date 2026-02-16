@@ -117,9 +117,13 @@ func _update_buttons():
 			btn.text = accessory.name + "\n$" + str(accessory.price)
 		
 
-func _on_background_back_button_pressed() -> void:
-	queue_free()
+#func _on_background_back_button_pressed() -> void:
+#	queue_free()
 
 
 func _on_button_pressed() -> void:
 	ShopGameData.reset_shop()
+
+
+func _on_background_back_button_button_down() -> void:
+	queue_free()

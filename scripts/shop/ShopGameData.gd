@@ -31,6 +31,7 @@ func buy_item(id: String, price: int) -> bool:
 		return false
 	
 	money -= price
+	money_changed.emit(money)
 	owned_items.append(id)
 	bought_item.emit(id)
 	save_game()

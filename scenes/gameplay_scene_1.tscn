@@ -1,10 +1,10 @@
 [gd_scene load_steps=48 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
-[ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
+[ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
-[ext_resource type="Texture2D" uid="uid://c6p03xhyqrbv3" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
-[ext_resource type="Texture2D" uid="uid://bq0hvnjiy8xo3" path="res://assets/UI/Popup Panels/Right Panel - Email.png" id="6_8kcot"]
+[ext_resource type="Texture2D" uid="uid://dypfrlw285mk6" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
+[ext_resource type="Texture2D" uid="uid://gwhcj4p0r76b" path="res://assets/UI/Popup Panels/Right Panel - Email.png" id="6_8kcot"]
 [ext_resource type="Texture2D" uid="uid://dwympexmcckpi" path="res://assets/characters/Single_Kid_Sprite_1.png" id="6_amqq1"]
 [ext_resource type="Script" uid="uid://ckl081hts2jol" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
 [ext_resource type="Script" uid="uid://b81f7cnxwrxmd" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
@@ -14,13 +14,13 @@
 [ext_resource type="Script" uid="uid://bj8r0b1re16st" path="res://scenes/bye_button.gd" id="11_cfo66"]
 [ext_resource type="Script" uid="uid://b8nlq2sjpo1vc" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://47eax1b8dlr3" path="res://scenes/messages_node.gd" id="13_1sg7f"]
-[ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="14_8cuma"]
-[ext_resource type="Texture2D" uid="uid://b1eru37a53nhj" path="res://assets/UI/Popup Panels/Right Panel - Message.png" id="14_ujqrd"]
+[ext_resource type="Script" path="res://scenes/label.gd" id="14_8cuma"]
+[ext_resource type="Texture2D" uid="uid://cn6cyti88cn3f" path="res://assets/UI/Popup Panels/Right Panel - Message.png" id="14_ujqrd"]
 [ext_resource type="Script" uid="uid://jualthnwyhwc" path="res://scenes/real_life_node.gd" id="15_5my5b"]
 [ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="15_lovhm"]
-[ext_resource type="Texture2D" uid="uid://ddq4tfyv82o4j" path="res://assets/UI/Popup Panels/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
-[ext_resource type="Texture2D" uid="uid://cfsdqobfvlw7q" path="res://assets/UI/Popup Panels/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
-[ext_resource type="Script" uid="uid://bkxkmx3ej5t00" path="res://scenes/accessories.gd" id="20_ypkrs"]
+[ext_resource type="Texture2D" uid="uid://bktpjte0h0eet" path="res://assets/UI/Popup Panels/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
+[ext_resource type="Texture2D" uid="uid://cnpmbhqmbc3tk" path="res://assets/UI/Popup Panels/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
+[ext_resource type="Script" path="res://scenes/accessories.gd" id="20_ypkrs"]
 [ext_resource type="Texture2D" uid="uid://bow0ip6a1lqmk" path="res://assets/rewards/BronzeMedal1.png" id="21_3ggs6"]
 [ext_resource type="Texture2D" uid="uid://vyl0mwpvy5cg" path="res://assets/UI/Buttons/Shop Button.png" id="21_wjgy3"]
 [ext_resource type="Texture2D" uid="uid://bh4krxrexulp0" path="res://assets/rewards/SilverMedal1.png" id="22_e7oxk"]
@@ -282,7 +282,6 @@ size_flags_stretch_ratio = 1.13
 theme_override_styles/panel = SubResource("StyleBoxEmpty_3ggs6")
 
 [node name="EmailNode" type="Control" parent="RightPanelContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("11_jyq0k")
 
@@ -697,6 +696,7 @@ layout_mode = 2
 texture_normal = ExtResource("25_uvkju")
 stretch_mode = 0
 
+[connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble" method="_on_gameplay_scene_1_graded_solution"]
 [connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]
 [connection signal="newCharacter" from="." to="WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newProblem" from="." to="." method="_on_new_problem"]
@@ -710,6 +710,7 @@ stretch_mode = 0
 [connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
 [connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]
 [connection signal="finished_thank_you_message" from="WaitingRoomPanelContainer/TextBubble/TextBubbleText" to="WaitingRoomPanelContainer/TextBubble/Bye Button" method="_on_text_bubble_text_finished_thank_you_message"]
+[connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="WaitingRoomPanelContainer/TextBubble" method="_on_checkout_button_show_problem"]
 [connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/EmailNode" method="_on_checkout_button_show_problem"]
 [connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/MessagesNode" method="_on_checkout_button_show_problem"]
 [connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/RealLifeNode" method="_on_checkout_button_show_problem"]
@@ -723,3 +724,7 @@ stretch_mode = 0
 [connection signal="submitSelection" from="RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
 [connection signal="pressed" from="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Open Shop Button" to="." method="_on_open_shop_button_pressed"]
+[connection signal="button_down" from="VBoxContainer/Open Problem Button" to="RightPanelContainer/EmailNode" method="_on_open_problem_button"]
+[connection signal="button_down" from="VBoxContainer/Open Problem Button" to="RightPanelContainer/MessagesNode" method="_on_open_problem_button"]
+[connection signal="button_down" from="VBoxContainer/Open Problem Button" to="RightPanelContainer/RealLifeNode" method="_on_open_problem_button"]
+[connection signal="button_up" from="VBoxContainer/Open Manual Button" to="." method="_on_open_manual_button"]

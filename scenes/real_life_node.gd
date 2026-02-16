@@ -48,3 +48,8 @@ func _on_checkout_button_show_problem() -> void:
 	if currProblem is RealLifeProblem:
 		visible = true
 		print("Problem")
+
+
+func _on_open_problem_button_button_down() -> void:
+	if currProblem is RealLifeProblem:
+		visible = (visible != true)

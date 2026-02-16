@@ -183,14 +183,17 @@ func load_markdown(path: String) -> String:
 	var file := FileAccess.open(path, FileAccess.READ)
 	return file.get_as_text()
 	
-func show_menu(title:String):
+func _on_open_manual_button():
 	var path=""
-	match title:
-		"Emails menu":
-			path = "res://game_data/menu/email_menu.md"
-		"Real Life menu":
-			path = "res://game_data/menu/real_life_menu.md"
-		"Messages menu":
+	var title := ""
+	if currentProblem is EmailProblem:
+		title = "Emails menu"
+		path = "res://game_data/menu/email_menu.md"
+	elif currentProblem is RealLifeProblem:
+		title = "Real Life menu"
+		path = "res://game_data/menu/real_life_menu.md"
+	elif currentProblem is MessagesProblem:
+			title = "Messages menu"
 			path = "res://game_data/menu/messages_menu.md"
 	
 	var md = load_markdown(path)
@@ -199,18 +202,6 @@ func show_menu(title:String):
 	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ManualLabel.text = title
 	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer/VScrollBar/RichTextLabel.text = bb
 	#Sakav ovde da dodam avtomatsko menuvanje na fokusot na menito, no trebashe ko ushte edna skripta (: 
-
-
-func _on_emails_menu_button_pressed() -> void:
-	show_menu("Emails menu")
-
-
-func _on_messages_menu_button_pressed() -> void:
-	show_menu("Messages menu")
-
-
-func _on_real_life_menu_button_pressed() -> void:
-	show_menu("Real Life menu")
 
 func _on_background_button_button_down() -> void:
 	var canvas = $ManualPopupCanvasLayer

@@ -48,3 +48,8 @@ func _on_email_submit_solution_button_pressed() -> void:
 func _on_checkout_button_show_problem() -> void:
 	if currProblem is EmailProblem:
 		visible = true
+
+
+func _on_open_problem_button() -> void:
+	if currProblem is EmailProblem:
+		visible = (visible != true)
