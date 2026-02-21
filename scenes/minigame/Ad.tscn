@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpedxy1v6cfyd"]
+[gd_scene load_steps=4 format=3 uid="uid://cpedxy1v6cfyd"]
 
 [ext_resource type="Texture2D" uid="uid://duw3gbojw64y7" path="res://assets/ads/Burger2AdBanner.png" id="1_k7dgd"]
 [ext_resource type="Script" uid="uid://b6d5w6mxtmgu2" path="res://scenes/minigame/ad_banner.gd" id="2_fvtot"]
+[ext_resource type="Texture2D" uid="uid://dwo85ctqms84w" path="res://assets/UI/AdExitBUtton.png" id="3_fvtot"]
 
-[node name="Ad Banner" type="TextureButton"]
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("1_k7dgd")
+[node name="Ad Banner" type="TextureRect"]
+offset_right = 119.0
+offset_bottom = 118.0
+texture = ExtResource("1_k7dgd")
 script = ExtResource("2_fvtot")
+
+[node name="Close Button" type="TextureButton" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -72.0
+offset_bottom = 78.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_fvtot")
+stretch_mode = 4

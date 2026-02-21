@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://wldmkkbupecl" path="res://assets/UI/Popup Panels/MinigamePopupPanel.png" id="1_pb5i6"]
 [ext_resource type="Script" uid="uid://xdsk6w475n2d" path="res://scenes/minigame/mini_game.gd" id="1_re4xa"]
-[ext_resource type="Texture2D" uid="uid://cdv3t00qk5v0j" path="res://assets/UI/Popup Panels/MinigameWebpageBackground.png" id="2_diy0u"]
+[ext_resource type="Texture2D" uid="uid://34hyhcw348kn" path="res://assets/UI/Popup Panels/MinigameWebpageBackground.png" id="2_diy0u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ly0"]
 bg_color = Color(0, 0, 0, 0.29411766)
@@ -29,6 +29,7 @@ offset_top = -37.0
 offset_right = 1071.0
 offset_bottom = 1288.0
 texture = ExtResource("2_diy0u")
+expand_mode = 4
 stretch_mode = 1
 
 [node name="Spawn Timer" type="Timer" parent="."]

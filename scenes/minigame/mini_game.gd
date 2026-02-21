@@ -65,7 +65,7 @@ func _spawn_ad():
 	var random_tex = ad_textures.pick_random()
 	
 	# 2. Determine a random width (e.g., between 180 and 350 pixels)
-	var target_width = randf_range(180.0, 350.0)
+	var target_width = randf_range(150.0, 250.0)
 	
 	# 3. Setup the ad's texture and size (Calling the function in Ad.gd)
 	if new_ad.has_method("setup"):
@@ -73,7 +73,7 @@ func _spawn_ad():
 	
 	# 4. Position it horizontally (ensuring it stays on screen)
 	var screen_w = get_viewport_rect().size.x
-	var random_x = randf_range(0, screen_w - new_ad.size.x)
+	var random_x = randf_range(0, ad_container.size.x - new_ad.size.x)
 	new_ad.position = Vector2(random_x, get_viewport_rect().size.y + 50)
 	
 	# 5. Set speed and connect signals
@@ -81,10 +81,11 @@ func _spawn_ad():
 	new_ad.ad_closed.connect(_on_ad_success)
 	new_ad.ad_missed.connect(_on_ad_failure)
 	
+	
 	ad_container.add_child(new_ad)
 	
 	# Randomize next spawn time
-	spawn_timer.wait_time = randf_range(0.4, 1.2)
+	spawn_timer.wait_time = randf_range(0.6, 1.0)
 
 # --- GAMEPLAY LOGIC ---
 

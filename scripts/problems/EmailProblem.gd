@@ -1,4 +1,4 @@
-﻿class_name EmailProblem
+class_name EmailProblem
 extends Problem
 
 @export var sender: String
