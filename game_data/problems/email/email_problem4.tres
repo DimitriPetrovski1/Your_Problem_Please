@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://drwarir202oa6"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_ws2xs"]
+
+[resource]
+script = ExtResource("1_ws2xs")
+sender = "security-team@appl3.com"
+subject = "YOUR APPLE ID HAS BEEN LOCKED!!!"
+body = "Your Apple ID has been locked due to suspicious activity from Nigeria. You must unlock it within 30 MINUTES or lose access forever!PLUS - You have a pending refund of $500 waiting for you!To unlock your account and claim your refund, provide:- Apple ID password- Credit card details- Social Security Number"
+correct_choices = Array[String](["Too good to be true", "Suspicious sender", "Too urgent", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

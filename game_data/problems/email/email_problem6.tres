@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://0u7wcrp65jfd"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_wcvg4"]
+
+[resource]
+script = ExtResource("1_wcvg4")
+sender = "support@discord.com"
+subject = "Password Change Confirmation"
+body = "Hello,Your Discord password was recently changed on February 21, 2026 at 3:45 PM.If you made this change, you can safely ignore this email."
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

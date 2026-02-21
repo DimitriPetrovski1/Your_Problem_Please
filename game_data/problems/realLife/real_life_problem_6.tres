@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://lt5pyvq8mbjs"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_4nl0b"]
+
+[resource]
+script = ExtResource("1_4nl0b")
+description = "I JUST GOT ACCEPTED INTO STANFORD! I'm so excited I want to post about it! I was thinking of writing: 'Can't believe I got into Stanford! Here's my student ID number: 12345678. Moving to 123 Campus Drive, Palo Alto. My birthday wish came true! 🎉 #ClassOf2028' Is that cool to post?"
+correct_choices = Array[String](["Posting personal info publicly"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

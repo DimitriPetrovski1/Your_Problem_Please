@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://ctswedhpy6iq2"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_8e1gs"]
+
+[resource]
+script = ExtResource("1_8e1gs")
+sender = "n0reply@spotlfy.com"
+subject = "CONGRATULATIONS! You Won Spotify Premium for FREE Forever!!!"
+body = "HELLO LUCKY WINNER!!!You have been randomly selected to receive LIFETIME Spotify Premium absolutely FREE! No payment ever! Click this link RIGHT NOW to claim your prize before someone else takes it!!! This offer expires in 1 HOUR ONLY!!!"
+correct_choices = Array[String](["Too good to be true", "Suspicious sender", "Too urgent"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

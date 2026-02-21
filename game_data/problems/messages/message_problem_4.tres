@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://76ixd7iotg8i"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_so7og"]
+
+[resource]
+script = ExtResource("1_so7og")
+sender_name = "Emily Rodriguez"
+isFriend = true
+messages = Array[String](["Hey, are we still meeting for coffee tomorrow?", "I was thinking 3pm at the usual place"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

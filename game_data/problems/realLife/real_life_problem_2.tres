@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://dw6qragj5a5ao"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_0521w"]
+
+[resource]
+script = ExtResource("1_0521w")
+description = "Dude, you won't believe what I found in the parking lot! There's a USB drive with a label that says 'CONFIDENTIAL - DO NOT LOSE'. I'm so curious what's on it. Should I plug it into my computer when I get home to check it out?"
+correct_choices = Array[String](["Plugging unknown USB drives into devices"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

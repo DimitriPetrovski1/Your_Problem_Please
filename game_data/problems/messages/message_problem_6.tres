@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://bj5llaermibv5"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_s7lki"]
+
+[resource]
+script = ExtResource("1_s7lki")
+sender_name = "Emily R."
+messages = Array[String](["Heyy it's Emily", "Need you to verify your identity for me", "Send me your social security number and address"])
+correct_choices = Array[String](["Suspicious sender", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

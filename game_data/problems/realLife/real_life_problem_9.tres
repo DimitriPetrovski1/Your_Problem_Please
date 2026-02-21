@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://dm0rq0nbah7oa"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_3bwdr"]
+
+[resource]
+script = ExtResource("1_3bwdr")
+description = "There's this poster at the bus stop with a QR code that says 'SCAN TO WIN $100 - SURVEY INSIDE'. I scanned it and it's asking for my name, address, phone number, email, and date of birth. Should I fill it all out? I could really use that $100!"
+correct_choices = Array[String](["Scanning unknown QR codes", "Posting personal info publicly"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

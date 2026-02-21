@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://t7dlsvuxwaf4"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_pk8dj"]
+
+[resource]
+script = ExtResource("1_pk8dj")
+sender_name = "Sara Johnson"
+messages = Array[String](["Hi!! It's Sarah from school!", "My phone broke so I'm using a new number", "I need help URGENTLY!!!", "Can you send me $100 through this link? bit.ly/def-not-scam"])
+correct_choices = Array[String](["Suspicious sender", "Urgent language", "Suspicious link or attachment", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

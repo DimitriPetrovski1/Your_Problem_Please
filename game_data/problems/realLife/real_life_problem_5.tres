@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://caubwlj1627cs"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_jytn8"]
+
+[resource]
+script = ExtResource("1_jytn8")
+description = "So my buddy told me about this awesome new game, but it's not on the app store yet. He sent me a link to download it from some website called 'free-apps-download.xyz'. The game looks super cool. Should I download it?"
+correct_choices = Array[String](["Downloading apps from unofficial sources"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

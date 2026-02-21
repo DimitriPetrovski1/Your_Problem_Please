@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://d272kfq37tpgj"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_moypr"]
+
+[resource]
+script = ExtResource("1_moypr")
+description = "Hey! I'm at the airport waiting for my flight and my phone is at 5%. I'm super worried it's gonna die before I board. I found a public charging station with USB ports. Should I just plug my phone in here? What do you think?"
+correct_choices = Array[String](["Charging devices on public USB ports"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

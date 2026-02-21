@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://b8gpaqa82dtyp"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_vdi3a"]
+
+[resource]
+script = ExtResource("1_vdi3a")
+sender_name = "TomAnderson2024"
+messages = Array[String](["Hey buddy! Long time no talk!", "Can you help me out ASAP??", "I need you to buy some gift cards and send me the codes"])
+correct_choices = Array[String](["Suspicious sender", "Urgent language", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

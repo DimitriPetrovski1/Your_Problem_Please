@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://b8s7hn4ebq2nm"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_lex06"]
+
+[resource]
+script = ExtResource("1_lex06")
+sender_name = "Mike Chen"
+isFriend = true
+messages = Array[String](["Dude, check out this video 😂", "My phone broke so I'm using a new number", "https://youtube.com/watch?v=dQw4w9WgXcQ", "Funniest thing I've seen all week"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

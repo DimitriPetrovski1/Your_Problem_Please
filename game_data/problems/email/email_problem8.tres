@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://2r4b70tuhqr0"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_j7mks"]
+
+[resource]
+script = ExtResource("1_j7mks")
+sender = "no-reply@amazon.com"
+subject = "Your Amazon Order #482-3947562-8472956"
+body = "Hello,Your order has been shipped and will arrive on February 23, 2026.Order details:- Wireless Headphones (Black)- Quantity: 1- Total: $29.99Track your package: amazon.com/your-orders"
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

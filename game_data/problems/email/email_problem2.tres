@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://beanseueef8ff"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_qb2y0"]
+
+[resource]
+script = ExtResource("1_qb2y0")
+sender = "official@yutube-support.net"
+subject = "Your YouTube Channel Will Be DELETED"
+body = "URGENT WARNING!We have detected copyright violations on your YouTube channel. Your channel will be PERMANENTLY DELETED in 2 HOURS unless you verify your identity immediately!Provide the following RIGHT NOW:- Full legal name- Credit card number- Social Security Number- Password"
+correct_choices = Array[String](["Suspicious sender", "Too urgent", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

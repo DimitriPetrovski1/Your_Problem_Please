@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://cyr6rpjadrp11"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_jyofm"]
+
+[resource]
+script = ExtResource("1_jyofm")
+sender = "verify@twich.tv"
+subject = "Claim Your $1000 Donation"
+body = "Hello Streamer!A generous viewer has donated $1,000 to your channel! However, we need to verify your banking information before we can transfer the money.Please reply with:- Bank account number- Routing number- Social Security Number"
+correct_choices = Array[String](["Too good to be true", "Suspicious sender", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

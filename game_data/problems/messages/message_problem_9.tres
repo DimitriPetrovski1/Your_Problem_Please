@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://dijo8m36c2pt8"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_alipe"]
+
+[resource]
+script = ExtResource("1_alipe")
+sender_name = "Rachel Kim Support"
+messages = Array[String](["Hello, this is Rachel from Technical Support", "We detected unusual activity on your device", "Download this security tool RIGHT NOW: http://totally-legit-antivirus.net/download.exe", "URGENT! Your device will be locked in 30 MINUTES if you don't act"])
+correct_choices = Array[String](["Suspicious sender", "Urgent language", "Suspicious link or attachment", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

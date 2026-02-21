@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://2g4owa56xjuo"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_xkt1u"]
+
+[resource]
+script = ExtResource("1_xkt1u")
+description = "I'm at the mall and my phone is dying! I don't have my charger but there's a charging kiosk here. Also, I really need to buy these shoes I've been wanting and they're on sale. Should I connect to the mall's public Wi-Fi and buy them online while my phone charges at the kiosk?"
+correct_choices = Array[String](["Charging devices on public USB ports", "Sharing sensitive information on public Wi-Fi"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

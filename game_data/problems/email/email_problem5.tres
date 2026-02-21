@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://blngokqm0b8bd"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_ail3p"]
+
+[resource]
+script = ExtResource("1_ail3p")
+sender = "urgent@discrod.com"
+subject = "FREE NITRO FOREVER - Limited Time!!!!"
+body = "Hey Gamer!!!You've been selected for FREE Discord Nitro for LIFE!!! No payment required EVER!!!But HURRY!!! This offer expires in 45 MINUTES!!!Click here now to get your free Nitro before this amazing deal disappears forever!!!"
+correct_choices = Array[String](["Too good to be true", "Suspicious sender", "Too urgent"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

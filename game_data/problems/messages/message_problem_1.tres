@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://cxw16ytol0t6v"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_r4qvk"]
+
+[resource]
+script = ExtResource("1_r4qvk")
+sender_name = "Sarah Johnson"
+isFriend = true
+messages = Array[String](["Hey! How are you doing?", "I found this cool article about that game you like", "Check it out when you have time 😊"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

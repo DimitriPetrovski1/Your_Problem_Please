@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://dh7g5gunduu4b"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_gtgmb"]
+
+[resource]
+script = ExtResource("1_gtgmb")
+description = "I was at this party last night and someone gave me a USB drive saying 'Hey, I took some photos from tonight, they're all on here!' Should I plug it into my laptop to check out the pictures?"
+correct_choices = Array[String](["Plugging unknown USB drives into devices"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

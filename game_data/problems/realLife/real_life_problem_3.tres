@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://bac3pf5tgjdu6"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_2kk6q"]
+
+[resource]
+script = ExtResource("1_2kk6q")
+description = "I'm at this coffee shop doing some work and I'm using their free Wi-Fi. I just remembered I need to send my friend some money. Is it okay if I log into my bank account real quick to transfer it? The Wi-Fi is called 'Free_Coffee_WiFi'."
+correct_choices = Array[String](["Sharing sensitive information on public Wi-Fi"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

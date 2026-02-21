@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://cdx2kp2t4k1ho"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_ibt3k"]
+
+[resource]
+script = ExtResource("1_ibt3k")
+sender = "security@instagramm.com"
+subject = "FINAL WARNING - Account Deletion in 1 Hour"
+body = "URGENT SECURITY ALERT!!!Your Instagram account will be PERMANENTLY DELETED in 1 HOUR due to violation of community guidelines!To save your account and ALL your photos, you must verify your identity RIGHT NOW by providing:- Your password- Phone number- Date of birth- Credit card information"
+correct_choices = Array[String](["Suspicious sender", "Too urgent", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

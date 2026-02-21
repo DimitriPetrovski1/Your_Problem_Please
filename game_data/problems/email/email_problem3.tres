@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://dvbdxh1jnjltt"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_o6b0w"]
+
+[resource]
+script = ExtResource("1_o6b0w")
+sender = "noreply@youtube.com"
+subject = "New comment on your video \"Cooking Tutorial\""
+body = "Hi there,Someone commented on your video \"Cooking Tutorial\":\"Great recipe! Thanks for sharing this.\" Thanks,The YouTube Team"
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"

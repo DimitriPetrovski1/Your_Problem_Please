@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MessagesProblem" load_steps=2 format=3 uid="uid://buqgdhqiyp664"]
+
+[ext_resource type="Script" uid="uid://u6srn0cgj2gn" path="res://scripts/problems/MessagesProblem.gd" id="1_spn5f"]
+
+[resource]
+script = ExtResource("1_spn5f")
+sender_name = "Jake Thompson"
+isFriend = true
+messages = Array[String](["Yo, I'm running late!!!", "Traffic is crazy today", "I'll be there in like 15 mins"])
+metadata/_custom_type_script = "uid://u6srn0cgj2gn"

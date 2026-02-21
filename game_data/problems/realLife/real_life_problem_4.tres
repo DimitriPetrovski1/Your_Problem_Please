@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://dbon223wy4l4p"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_25wf0"]
+
+[resource]
+script = ExtResource("1_25wf0")
+description = "OMG I'm at this restaurant and there's a QR code on the table that says 'Scan for FREE DESSERT!' I love free food! Should I scan it right now?"
+correct_choices = Array[String](["Scanning unknown QR codes"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

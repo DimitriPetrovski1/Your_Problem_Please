@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://c7mbcx05vgpr6"]
+
+[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_x00kn"]
+
+[resource]
+script = ExtResource("1_x00kn")
+description = "You know that game I've been waiting for? It finally came out but it's not in the app store yet! I found a YouTube video showing how to download it from another website. It says I need to disable my security settings first. Should I do it? The app is also asking for permission to access my contacts, messages, and photos. Is that normal?"
+correct_choices = Array[String](["Downloading apps from unofficial sources"])
+metadata/_custom_type_script = "uid://cje5tuo4tlokj"

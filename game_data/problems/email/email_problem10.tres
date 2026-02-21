@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://bsel80orm8k04"]
+
+[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_jbij0"]
+
+[resource]
+script = ExtResource("1_jbij0")
+sender = "alerts@dr0pbox.com"
+subject = "You've Received $5000 in Your Dropbox!"
+body = "CONGRATULATIONS!!!!Someone has shared a folder containing $5,000 CASH with you on Dropbox!!!This is 100% REAL MONEY and it's all yours!!!But you MUST claim it in the next 2 HOURS or it will be given to someone else!!! Click here now and enter your bank account details to receive your money instantly!!!"
+correct_choices = Array[String](["Too good to be true", "Suspicious sender", "Too urgent", "Requests sensitive information"])
+metadata/_custom_type_script = "uid://dk2x3qx2xd80y"
