@@ -21,10 +21,8 @@
 
 | Shop | Rewards |
 |:----:|:-------:|
-| <img width="877" height="716" alt="image" src="https://github.com/user-attachments/assets/656d1db3-0fa9-462c-89d0-2efa7f814b1e" /> | <img width="1055" height="589" alt="image" src="https://github.com/user-attachments/assets/c09c7764-6bc5-457f-8f1d-b8d5ec68af23" />
- |
+| <img width="877" height="716" alt="image" src="https://github.com/user-attachments/assets/656d1db3-0fa9-462c-89d0-2efa7f814b1e" /> | <img width="1055" height="589" alt="image" src="https://github.com/user-attachments/assets/c09c7764-6bc5-457f-8f1d-b8d5ec68af23" />|
 
-![Uploading Minigame.png…]()
 
 
 
