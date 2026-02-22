@@ -17,11 +17,12 @@
 
 | Main Desk | Case Review | Ad Minigame |
 |:---------:|:-----------:|:-----------:|
-| ![Desk](https://placehold.co/280x180?text=Desk+View) | ![Case](https://placehold.co/280x180?text=Case+Review) | ![Minigame](https://placehold.co/280x180?text=Ad+Minigame) |
+| <img width="1273" height="712" alt="Desk View" src="https://github.com/user-attachments/assets/f411688d-465e-4a03-8b6a-50c8e16f5a3b" /> | ![Case](https://placehold.co/280x180?text=Case+Review) | ![Minigame](https://placehold.co/280x180?text=Ad+Minigame) |
 
 | Shop | Rewards |
 |:----:|:-------:|
 | ![Shop](https://placehold.co/280x180?text=Shop) | ![Rewards](https://placehold.co/280x180?text=Rewards) |
+
 
 ---
 
@@ -70,15 +71,18 @@ Built with **Godot 4**, organized as follows:
 ```
 res://
 ├── assets/
-│   ├── ads/              # Textures for the ad minigame
-│   ├── Fonts/            # Game fonts (ByteBounce.ttf, etc.)
-│   └── UI/               # UI textures and frames
+│   ├── ads/                   # Banner textures for the ad minigame
+│   ├── Characters/            # Sprites of friends that come for help
+│   ├── Fonts/                 # Game fonts (ByteBounce.ttf, etc.)
+│   └── UI/                    # UI textures and frames
 ├── scenes/
-│   ├── minigame/         # Ad minigame scene and scripts
+│   ├── mainGameplayScene/     # Main gameplay scene
 │   └── shop/
-│       └── accessories/  # AccessoryData .tres resource files
+│       └── accessories/       # AccessoryData .tres resource files
+│   └── miniGame/              # Ad minigame scene and scripts
 └── scripts/
-    └── ShopGameData.gd   # Global autoload for money, owned/equipped items
+    └── ShopGameData.gd        # Global autoload for money, owned/equipped items
+    └── mainGameplayScene.gd   # Global autoload for money, owned/equipped items
 ```
 
 ### Key Systems
