@@ -712,6 +712,7 @@ stretch_mode = 0
 [connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
 [connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]
 [connection signal="finished_thank_you_message" from="WaitingRoomPanelContainer/TextBubble/TextBubbleText" to="WaitingRoomPanelContainer/TextBubble/Bye Button" method="_on_text_bubble_text_finished_thank_you_message"]
+[connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="." method="_on_checkout_button_show_problem"]
 [connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="WaitingRoomPanelContainer/TextBubble" method="_on_checkout_button_show_problem"]
 [connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/EmailNode" method="_on_checkout_button_show_problem"]
 [connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/MessagesNode" method="_on_checkout_button_show_problem"]

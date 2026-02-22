@@ -1,5 +1,7 @@
 extends Control
 
+signal MinigameOver
+
 # --- EXPORTS ---
 @export var ad_scene: PackedScene = preload("res://scenes/minigame/Ad.tscn")
 @export var ad_textures: Array[Texture2D] = []
@@ -194,6 +196,7 @@ func _game_over():
 	print("Game Over! Earned: $", total_earned)
 
 func _on_exit_button_pressed():
+	MinigameOver.emit(score)
 	queue_free()
 
 func _on_quit_button_pressed():

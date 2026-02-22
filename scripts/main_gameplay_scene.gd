@@ -7,16 +7,14 @@ var ProblemDB:Array[Problem]
 signal newProblem(problem:Problem)
 signal newCharacter(characterTexture:Texture2D)
 signal graded_solution
-signal score_into_money
 var currentCharacter:Texture2D = null
-var currentProblem:Problem = null
-var number_problems_solved := 0
-const problems_per_day := 2
+var currentProblem = null
+const problems_per_day := 5
 var day_scene_path = "res://scenes/Day.tscn"
 
 var shop_scene = preload("res://scenes/shop/Shop.tscn")
 
-@onready var score:int = 0 
+var score:int = 0 
 @onready var accessory_container = $Accessories # The parent node of all your sprites
 
 
@@ -82,6 +80,10 @@ func pickCharacter():
 
 
 func pickProblem() -> void:
+	if GameInfo.problems_solved_today==GameInfo.problem_no_to_spawn_minigame:
+		currentProblem= MinigameProblem.new()
+		newProblem.emit(currentProblem)
+		return
 	var newProb
 	if not currentProblem:
 		newProb = ProblemDB.pick_random()
@@ -95,13 +97,13 @@ func pickProblem() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#update_accessory_visibility()
+	#update_accessory_visibility()	
 	initCharacterDB()
 	initProblemDB()
+	GameInfo.set_minigame_problem_no(randi_range(0,problems_per_day-1))
 	pickCharacter()
 	pickProblem()
-#	reparent(get_tree().root)
-
+	
 
 #func update_accessory_visibility():
 	## Loop through every sprite inside the Accessories container
@@ -117,7 +119,7 @@ func _ready() -> void:
 
 
 func gradeSolution(solutions:Array[String])->void:
-	number_problems_solved +=1
+	GameInfo.increment_problems_solved()
 	var correctChoices = currentProblem.get_correct_choices()
 	var newScoreDelta=0
 	for solution in solutions:
@@ -141,7 +143,7 @@ func gradeSolution(solutions:Array[String])->void:
 
 	
 func _on_customer_sprite_character_exited() -> void:
-	pickCharacter()
+	pickCharacter()         
 	pickProblem()
 
 func _on_email_node_submit_selection(solutions: Array[String]) -> void:
@@ -230,7 +232,24 @@ func _on_open_shop_button_pressed() -> void:
 
 
 func _on_bye_button_pressed() -> void:
-	if number_problems_solved == problems_per_day:
-		number_problems_solved = 0
+	print(GameInfo.problems_solved_today)
+	if GameInfo.problems_solved_today == problems_per_day:
+		GameInfo.reset_problems_solved()
 		Transition.transition_to(day_scene_path)
 		return
+
+
+func _on_checkout_button_show_problem() -> void:
+	if currentProblem is not MinigameProblem:
+		return
+	var minigame_scene = load("res://scenes/minigame/MiniGame.tscn")
+	var minigame = minigame_scene.instantiate()
+	minigame.name = "MinigameInstance"
+	minigame.MinigameOver.connect(_on_minigame_finished)
+	# Adding it here (to the root) makes it start at the top-left of the screen
+	add_child(minigame)
+	
+func _on_minigame_finished(minigame_score:int):
+	GameInfo.increment_problems_solved()
+	score+=minigame_score
+	graded_solution.emit()
