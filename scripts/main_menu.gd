@@ -1,8 +1,9 @@
 extends Control
 
+@onready var music_player = $MusicPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	music_player.play()
 
 func _on_start_pressed() -> void:
 	print("Start pressed")

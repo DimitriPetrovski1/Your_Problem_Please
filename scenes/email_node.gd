@@ -50,6 +50,6 @@ func _on_checkout_button_show_problem() -> void:
 		visible = true
 
 
-func _on_open_problem_button() -> void:
+func _on_open_problem_button_pressed() -> void:
 	if currProblem is EmailProblem:
 		visible = (visible != true)

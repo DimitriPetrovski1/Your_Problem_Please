@@ -71,6 +71,6 @@ func _on_checkout_button_show_problem() -> void:
 		print("Problem")
 
 
-func _on_open_problem_button() -> void:
+func _on_open_problem_button_pressed() -> void:
 	if currProblem is MessagesProblem:
 		visible = (visible != true)

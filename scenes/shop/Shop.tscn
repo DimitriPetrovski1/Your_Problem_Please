@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjav3hhcrpc3s"]
+[gd_scene load_steps=11 format=3 uid="uid://cjav3hhcrpc3s"]
 
 [ext_resource type="Script" uid="uid://cbf5v4y280uim" path="res://scenes/shop/shop.gd" id="1_3qebd"]
 [ext_resource type="Texture2D" uid="uid://cyt5lys3u3ybk" path="res://assets/UI/Popup Panels/shop_popup_panel.png" id="1_rktij"]
+[ext_resource type="Script" uid="uid://brnl2m1r18evi" path="res://scenes/shop/scroll_container.gd" id="3_6yl83"]
 [ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_srfm6"]
 [ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="4_xjfbs"]
 [ext_resource type="Texture2D" uid="uid://3o62hle6oeur" path="res://assets/misc_sprites/money_sprite.png" id="5_xjfbs"]
@@ -66,6 +67,7 @@ offset_right = 392.0
 offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_6yl83")
 
 [node name="GridContainer" type="GridContainer" parent="Background Back Button/TextureRect/ScrollContainer"]
 layout_mode = 2

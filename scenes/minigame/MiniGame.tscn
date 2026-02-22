@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1pp2qogukqgp"]
+[gd_scene load_steps=8 format=3 uid="uid://b1pp2qogukqgp"]
 
 [ext_resource type="Texture2D" uid="uid://wldmkkbupecl" path="res://assets/UI/Popup Panels/MinigamePopupPanel.png" id="1_pb5i6"]
 [ext_resource type="Script" uid="uid://xdsk6w475n2d" path="res://scenes/minigame/mini_game.gd" id="1_re4xa"]
 [ext_resource type="Texture2D" uid="uid://34hyhcw348kn" path="res://assets/UI/Popup Panels/MinigameWebpageBackground.png" id="2_diy0u"]
 [ext_resource type="FontFile" uid="uid://dj8l2pfcrqq10" path="res://assets/Fonts/ByteBounce.ttf" id="3_diy0u"]
 [ext_resource type="Texture2D" uid="uid://dj1qprqp6c0gh" path="res://assets/UI/Buttons/Brown Button.png" id="3_kxtkx"]
+[ext_resource type="AudioStream" uid="uid://dw3snji4fmpv7" path="res://assets/sound/music/MiniGameMusic.mp3" id="6_n4xfe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ly0"]
 bg_color = Color(0, 0, 0, 0.29411766)
@@ -136,3 +137,6 @@ theme_override_font_sizes/font_size = 161
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_n4xfe")
