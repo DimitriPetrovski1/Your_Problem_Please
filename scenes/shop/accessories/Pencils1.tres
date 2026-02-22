@@ -11,3 +11,5 @@ price = 50
 texture = ExtResource("2_k5nop")
 desk_position = Vector2(50, 50)
 metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
+purchasable = true
+obtainability_requirement_description="Can be purchased in the store"
