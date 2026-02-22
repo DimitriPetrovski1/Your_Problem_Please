@@ -17,12 +17,13 @@
 
 | Main Desk | Case Review | Ad Minigame |
 |:---------:|:-----------:|:-----------:|
-| <img width="1273" height="712" alt="Desk View" src="https://github.com/user-attachments/assets/f411688d-465e-4a03-8b6a-50c8e16f5a3b" /> | ![Case](https://placehold.co/280x180?text=Case+Review) | ![Minigame](https://placehold.co/280x180?text=Ad+Minigame) |
+| <img width="1273" height="712" alt="Desk View" src="https://github.com/user-attachments/assets/f411688d-465e-4a03-8b6a-50c8e16f5a3b" /> | <img width="731" height="703" alt="case review" src="https://github.com/user-attachments/assets/3c559817-40f8-41c5-9a9d-ad713655a55a" /> | <img width="1276" height="716" alt="Minigame" src="https://github.com/user-attachments/assets/b40f2df9-228f-4cfe-bed0-934eb9d44f32" /> |
 
 | Shop | Rewards |
 |:----:|:-------:|
 | ![Shop](https://placehold.co/280x180?text=Shop) | ![Rewards](https://placehold.co/280x180?text=Rewards) |
 
+![Uploading Minigame.png…]()
 
 ---
 
