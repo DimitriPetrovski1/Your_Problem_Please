@@ -131,7 +131,6 @@ Drop any `.png`, `.jpg`, or `.webp` image into `res://assets/ads/` and it will b
 - [Godot 4](https://godotengine.org/) — Game engine
 - GDScript — Scripting language
 
-## Made by
-- K&D
--- Dimitri Petrovski 226116
--- Kiril Stefanovski 22????
+## Developed by K&D
+- Kiril Stefanovski 226037
+- Dimitri Petrovski 226116
