@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://bd2nxjbbcs5dt"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_negy1"]
+[ext_resource type="Texture2D" uid="uid://bbwv2vld63vf0" path="res://assets/rewards/Helmet.png" id="2_negy1"]
+
+[resource]
+script = ExtResource("1_negy1")
+id = "24"
+name = "Helmet"
+price = 500
+texture = ExtResource("2_negy1")
+desk_position = Vector2(50, 50)
+purchasable = true
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://b0lnjkqqxqp8d"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_rldi6"]
+[ext_resource type="Texture2D" uid="uid://57qaqnjhyqnv" path="res://assets/rewards/BlueBadge1.png" id="2_rldi6"]
+
+[resource]
+script = ExtResource("1_rldi6")
+id = "14"
+name = "Blue Badge"
+price = 300
+texture = ExtResource("2_rldi6")
+desk_position = Vector2(50, 50)
+purchasable = true
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
