@@ -6,3 +6,5 @@ class_name AccessoryData
 @export var price: int
 @export var texture: Texture2D
 @export var desk_position: Vector2
+@export var purchasable: bool
+@export var obtainability_requirement_description:String
