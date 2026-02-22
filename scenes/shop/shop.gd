@@ -16,7 +16,7 @@ func _ready():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if file_name.ends_with(".tres"):
+			if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
 				var res = load(folder + file_name)
 				if res:
 					accessories.append(res)

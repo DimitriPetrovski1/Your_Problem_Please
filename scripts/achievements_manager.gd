@@ -71,7 +71,7 @@ func load_and_filter_accessories():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if file_name.ends_with(".tres"):
+			if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
 				var res: AccessoryData = load(PATH_TO_ACCESSORIES + file_name) as AccessoryData
 				# Only keep it if it's NOT purchasable (an achievement)
 				if res and not res.get("purchasable"):

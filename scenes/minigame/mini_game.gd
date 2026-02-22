@@ -59,7 +59,7 @@ func _load_ads_from_folder():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if file_name.ends_with(".png") or file_name.ends_with(".jpg") or file_name.ends_with(".webp"):
+			if file_name.ends_with(".png") or file_name.ends_with(".png.remap") or file_name.ends_with(".jpg") or file_name.ends_with(".jpg.remap") or file_name.ends_with(".webp") or file_name.ends_with(".webp.remap"):
 				var tex = load(ads_folder_path + file_name)
 				if tex:
 					ad_textures.append(tex)
