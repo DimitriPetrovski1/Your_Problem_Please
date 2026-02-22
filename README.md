@@ -2,7 +2,8 @@
 
 > A cozy cyber-safety game where you sit at your desk and help friends navigate the dangers of the digital world.
 
-![Game Banner](https://placehold.co/900x400?text=Game+Banner+Screenshot)
+![Game Banner](<img width="776" height="184" alt="Your Problem, Please" src="https://github.com/user-attachments/assets/ca79df50-65e0-41e6-b357-677a5cba2c8d" />)
+
 
 ---
 
