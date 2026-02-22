@@ -30,8 +30,9 @@ func initCharacterDB():
 
 	while file_name != "":
 		if not dir.current_is_dir():
-			if file_name.get_extension().to_lower() in ["png", "jpg", "jpeg", "webp"]:
-				var full_path = dirPath + file_name
+			var clean_name = file_name.replace(".remap", "").replace(".import", "")
+			if clean_name.get_extension().to_lower() in ["png", "jpg", "jpeg", "webp"]:
+				var full_path = dirPath + clean_name
 				var tex := load(full_path)
 				if tex:
 					CharacterDB.append(tex)
@@ -56,8 +57,9 @@ func initProblemDB():
 		var file_name := subdir.get_next()
 		while file_name != "":
 			if not subdir.current_is_dir():
-				if file_name.get_extension().to_lower() == 'tres':
-					var full_path = subdirpath + file_name
+				var clean_name = file_name.replace(".remap", "").replace(".import", "")
+				if clean_name.get_extension().to_lower() == 'tres':
+					var full_path = subdirpath + clean_name
 					var problem := ResourceLoader.load(full_path)
 					if problem:
 						ProblemDB.append(problem)
@@ -188,22 +190,14 @@ func load_markdown(path: String) -> String:
 	return file.get_as_text()
 	
 func _on_open_manual_button():
-	var path=""
-	var title := ""
-	if currentProblem is EmailProblem:
-		title = "Emails menu"
-		path = "res://game_data/menu/email_menu.md"
-	elif currentProblem is RealLifeProblem:
-		title = "Real Life menu"
-		path = "res://game_data/menu/real_life_menu.md"
-	elif currentProblem is MessagesProblem:
-			title = "Messages menu"
-			path = "res://game_data/menu/messages_menu.md"
-	
+	var path = "res://game_data/menu/menu.md"
+	var file := FileAccess.open(path, FileAccess.READ)
+	if not file:
+		path = path+".import"
 	var md = load_markdown(path)
 	var bb = md_to_bbcode(md)
 	$ManualPopupCanvasLayer.visible = true
-	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ManualLabel.text = title
+	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ManualLabel.text = "Menu"
 	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer/VScrollBar/RichTextLabel.text = bb
 	#Sakav ovde da dodam avtomatsko menuvanje na fokusot na menito, no trebashe ko ushte edna skripta (: 
 

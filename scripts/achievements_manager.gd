@@ -70,13 +70,29 @@ func load_and_filter_accessories():
 	if dir:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
+		
+		# Keep track of what we've already loaded to prevent duplicates
+		var loaded_paths = []
+
 		while file_name != "":
-			if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
-				var res: AccessoryData = load(PATH_TO_ACCESSORIES + file_name) as AccessoryData
-				# Only keep it if it's NOT purchasable (an achievement)
-				if res and not res.get("purchasable"):
-					all_achievements.append(res)
+			if not dir.current_is_dir():
+				# 1. Clean the filename to get the original Resource path
+				var clean_name = file_name.replace(".remap", "").replace(".import", "")
+				
+				# 2. Check if it's a resource and we haven't processed it yet
+				if clean_name.ends_with(".tres") and not clean_name in loaded_paths:
+					var full_path = PATH_TO_ACCESSORIES + clean_name
+					var res = load(full_path) as AccessoryData
+					
+					# 3. Only keep if it exists and matches your criteria
+					if res and not res.get("purchasable"):
+						all_achievements.append(res)
+						loaded_paths.append(clean_name)
+			
 			file_name = dir.get_next()
+		dir.list_dir_end()
+	else:
+		print("Error: Could not find accessories folder at ", PATH_TO_ACCESSORIES)
 
 func check_achievement_status(accessory: AccessoryData) -> bool:
 	# Look up the function using the ID from the resource

@@ -15,16 +15,21 @@ func _ready():
 	if dir:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
+		var processed_files = [] # Prevent duplicates in editor
 		while file_name != "":
-			if file_name.ends_with(".tres") or file_name.ends_with(".tres.remap"):
-				var res = load(folder + file_name)
-				if res:
-					accessories.append(res)
+			if not dir.current_is_dir():
+				# Strip .remap and .import to get the base resource path
+				var clean_name = file_name.replace(".remap", "").replace(".import", "")
+				
+				if clean_name.ends_with(".tres") and not clean_name in processed_files:
+					var res = load(folder + clean_name)
+					if res:
+						accessories.append(res)
+						processed_files.append(clean_name)
 			file_name = dir.get_next()
 		dir.list_dir_end()
 	accessories.sort_custom(func(a, b): return int(a.id) < int(b.id))
 
-	
 	# 2. Populate shop
 	for accessory in accessories:
 		# Create a Horizontal wrapper for each shop item
@@ -86,6 +91,7 @@ func _ready():
 		item_container.add_child(btn)
 	
 	_update_buttons()
+
 
 func _show_requirements_popup(accessory: AccessoryData) -> void:
 	var popup = AcceptDialog.new()

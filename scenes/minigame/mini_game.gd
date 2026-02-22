@@ -59,15 +59,19 @@ func _load_ads_from_folder():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if file_name.ends_with(".png") or file_name.ends_with(".png.remap") or file_name.ends_with(".jpg") or file_name.ends_with(".jpg.remap") or file_name.ends_with(".webp") or file_name.ends_with(".webp.remap"):
-				var tex = load(ads_folder_path + file_name)
-				if tex:
-					ad_textures.append(tex)
+			if not dir.current_is_dir():
+				# 1. Strip remap/import to get the 'Editor' path
+				var clean_name = file_name.replace(".remap", "").replace(".import", "")
+				
+				# 2. Check extension on the CLEANED name
+				if clean_name.ends_with(".png") or clean_name.ends_with(".jpg") or clean_name.ends_with(".webp"):
+					var full_path = ads_folder_path + clean_name
+					var tex = load(full_path)
+					if tex:
+						ad_textures.append(tex)
 			file_name = dir.get_next()
 		dir.list_dir_end()
-	else:
-		print("Error: Could not find ads folder at ", ads_folder_path)
-
+		
 func _spawn_ad():
 	if ad_textures.is_empty() or ad_scene == null:
 		return
