@@ -17,6 +17,8 @@ func check_for_new_achievements():
 	for achievement in all_achievements:
 		if check_achievement_status(achievement) and achievement not in earned_achievements:
 			earned_achievements.append(achievement)
+			ShopGameData.owned_items.append(achievement.id)
+			ShopGameData.save_game()
 			new_achievement_unlocked.emit(achievement)
 	save_game()
 	
