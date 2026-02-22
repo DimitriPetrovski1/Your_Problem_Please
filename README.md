@@ -10,7 +10,7 @@
 
 ## 🕹️ Play Now
 
-👉 **[Play in Browser / Download](#)** ← *(replace with your itch.io, web build, or .exe link)*
+👉 **[Play in Browser]([#](https://d1imitri.itch.io/your-problem-please))** ← *(replace with your itch.io, web build, or .exe link)*
 
 ---
 
