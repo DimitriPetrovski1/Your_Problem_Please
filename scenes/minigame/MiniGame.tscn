@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://wldmkkbupecl" path="res://assets/UI/Popup Panels/MinigamePopupPanel.png" id="1_pb5i6"]
 [ext_resource type="Script" uid="uid://xdsk6w475n2d" path="res://scenes/minigame/mini_game.gd" id="1_re4xa"]
 [ext_resource type="Texture2D" uid="uid://34hyhcw348kn" path="res://assets/UI/Popup Panels/MinigameWebpageBackground.png" id="2_diy0u"]
-[ext_resource type="FontFile" uid="uid://c7dti42cko3jx" path="res://assets/Fonts/ByteBounce.ttf" id="3_diy0u"]
+[ext_resource type="FontFile" uid="uid://dj8l2pfcrqq10" path="res://assets/Fonts/ByteBounce.ttf" id="3_diy0u"]
 [ext_resource type="Texture2D" uid="uid://dj1qprqp6c0gh" path="res://assets/UI/Buttons/Brown Button.png" id="3_kxtkx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ly0"]
@@ -45,14 +45,14 @@ offset_bottom = 786.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="HUD"]
+[node name="PointAndLivesRect" type="TextureRect" parent="HUD"]
 offset_left = 22.0
 offset_top = 42.0
 offset_right = 185.0
 offset_bottom = 198.0
 texture = ExtResource("3_kxtkx")
 
-[node name="VBoxPoints" type="VBoxContainer" parent="HUD/TextureRect"]
+[node name="VBoxPoints" type="VBoxContainer" parent="HUD/PointAndLivesRect"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -61,21 +61,21 @@ offset_bottom = 70.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="PointsText" type="Label" parent="HUD/TextureRect/VBoxPoints"]
+[node name="PointsText" type="Label" parent="HUD/PointAndLivesRect/VBoxPoints"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Points:"
 horizontal_alignment = 1
 
-[node name="PointsLabel" type="Label" parent="HUD/TextureRect/VBoxPoints"]
+[node name="PointsLabel" type="Label" parent="HUD/PointAndLivesRect/VBoxPoints"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Points"
 horizontal_alignment = 1
 
-[node name="VBoxLives" type="VBoxContainer" parent="HUD/TextureRect"]
+[node name="VBoxLives" type="VBoxContainer" parent="HUD/PointAndLivesRect"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -87,14 +87,14 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="LivesText" type="Label" parent="HUD/TextureRect/VBoxLives"]
+[node name="LivesText" type="Label" parent="HUD/PointAndLivesRect/VBoxLives"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Lives:"
 horizontal_alignment = 1
 
-[node name="LivesLabel" type="Label" parent="HUD/TextureRect/VBoxLives"]
+[node name="LivesLabel" type="Label" parent="HUD/PointAndLivesRect/VBoxLives"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
@@ -111,3 +111,28 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_pb5i6")
 stretch_mode = 5
+
+[node name="GameOver" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.5
+offset_top = -84.0
+offset_right = 218.5
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.88235295, 0.61960787, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.6963688, 0.16345447, 0.32795486, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 161
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjav3hhcrpc3s"]
+[gd_scene load_steps=10 format=3 uid="uid://cjav3hhcrpc3s"]
 
 [ext_resource type="Script" uid="uid://cbf5v4y280uim" path="res://scenes/shop/shop.gd" id="1_3qebd"]
 [ext_resource type="Texture2D" uid="uid://cyt5lys3u3ybk" path="res://assets/UI/Popup Panels/shop_popup_panel.png" id="1_rktij"]
 [ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_srfm6"]
-[ext_resource type="Script" path="res://scenes/label.gd" id="4_xjfbs"]
+[ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="4_xjfbs"]
+[ext_resource type="Texture2D" uid="uid://3o62hle6oeur" path="res://assets/misc_sprites/money_sprite.png" id="5_xjfbs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srfm6"]
 bg_color = Color(0, 0, 0, 0.29411766)
@@ -76,7 +77,7 @@ columns = 3
 
 [node name="Money" type="Label" parent="Background Back Button/TextureRect"]
 layout_mode = 0
-offset_left = 18.0
+offset_left = 91.0
 offset_top = 118.0
 offset_right = 570.0
 offset_bottom = 164.0
@@ -111,6 +112,14 @@ offset_top = 559.0
 offset_right = 813.0
 offset_bottom = 646.0
 text = "Reset Shop"
+
+[node name="TextureRect" type="TextureRect" parent="Background Back Button/TextureRect"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 121.0
+offset_right = 64.0
+offset_bottom = 161.0
+texture = ExtResource("5_xjfbs")
 
 [connection signal="button_down" from="Background Back Button" to="." method="_on_background_back_button_button_down"]
 [connection signal="pressed" from="Background Back Button/TextureRect/Button" to="." method="_on_button_pressed"]

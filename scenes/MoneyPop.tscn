@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://4hy08ikwsl76"]
+
+[ext_resource type="Texture2D" uid="uid://3o62hle6oeur" path="res://assets/misc_sprites/money_sprite.png" id="1_jk2i4"]
+[ext_resource type="Script" uid="uid://qgoi4lgs3bpu" path="res://scenes/money_pop.gd" id="2_meean"]
+
+[node name="MoneyPop" type="Sprite2D"]
+position = Vector2(26, 19)
+texture = ExtResource("1_jk2i4")
+script = ExtResource("2_meean")
