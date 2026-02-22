@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcflhdq7cd7uk"]
+
+[ext_resource type="Script" uid="uid://8wy2jg0uxb5r" path="res://scenes/notifications/achievement_unlocked_scene.gd" id="1_g82hd"]
+[ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="2_qafpm"]
+[ext_resource type="Texture2D" uid="uid://bx0nwl3nta8yb" path="res://assets/boss_sprite.png" id="3_tmi6g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60xp5"]
+bg_color = Color(0, 0, 0, 0.29411766)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a66xr"]
+bg_color = Color(0, 0, 0, 0.29411766)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2646"]
+bg_color = Color(0, 0, 0, 0.29411766)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bt0d"]
+bg_color = Color(0, 0, 0, 0.29411766)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_14d03"]
+
+[node name="AchievementUnlockedScene" type="Node2D"]
+script = ExtResource("1_g82hd")
+
+[node name="BackgroundBackButton" type="Button" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0.07450981)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0.18431373)
+theme_override_styles/normal = SubResource("StyleBoxFlat_60xp5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a66xr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2646")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1bt0d")
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundBackButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -201.5
+offset_right = 253.0
+offset_bottom = 201.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = SubResource("CanvasTexture_14d03")
+stretch_mode = 5
+
+[node name="header" type="Label" parent="BackgroundBackButton/TextureRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 52.0
+offset_right = -53.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qafpm")
+theme_override_font_sizes/font_size = 30
+text = "NEW ACHIEVEMENT UNLOCKED!
+check it out in the shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundBackButton/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.455335
+anchor_right = 0.5
+anchor_bottom = 0.455335
+offset_left = -92.68518
+offset_top = -91.0
+offset_right = 92.68518
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_tmi6g")
+metadata/_edit_use_anchors_ = true
+
+[node name="achievement_name_label" type="Label" parent="BackgroundBackButton/TextureRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 52.0
+offset_top = 272.5
+offset_right = -52.0
+offset_bottom = 343.5
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qafpm")
+theme_override_font_sizes/font_size = 30
+text = "achievement name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="BackgroundBackButton/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -59.5
+offset_right = 46.0
+offset_bottom = -19.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Okay"
+
+[connection signal="pressed" from="BackgroundBackButton" to="." method="_on_background_back_button_pressed"]
+[connection signal="pressed" from="BackgroundBackButton/TextureRect/Button" to="." method="_on_button_pressed"]

@@ -35,7 +35,9 @@ func buy_item(id: String, price: int) -> bool:
 	owned_items.append(id)
 	bought_item.emit(id)
 	save_game()
+	AchievementsManager.set_num_bought_items(AchievementsManager.num_bought_items+1)
 	return true
+	
 
 
 func reset_shop()-> void:
@@ -43,6 +45,7 @@ func reset_shop()-> void:
 	money=1000
 	money_changed.emit(money)
 	save_game()
+	AchievementsManager.set_num_bought_items(0)
 # =========================
 # EQUIP
 # =========================

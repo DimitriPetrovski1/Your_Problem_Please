@@ -98,6 +98,7 @@ func pickProblem() -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#update_accessory_visibility()
+	AchievementsManager.new_achievement_unlocked.connect(_on_new_achievement_unlocked)
 	music_player.play()
 	initCharacterDB()
 	initProblemDB()
@@ -140,6 +141,9 @@ func gradeSolution(solutions:Array[String])->void:
 	if newScoreDelta > 0:
 		ShopGameData.add_money(newScoreDelta*10)
 	print("new Score:",score)
+	if newScoreDelta == solutions.size()*5:
+		AchievementsManager.increment_num_perfect_solves()
+	graded_solution.emit()
 	
 
 	
@@ -149,15 +153,15 @@ func _on_customer_sprite_character_exited() -> void:
 
 func _on_email_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
-	graded_solution.emit()
+	AchievementsManager.increment_email_problems_solved()
 
 func _on_messages_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
-	graded_solution.emit()
+	AchievementsManager.increment_messages_problems_solved()
 
 func _on_real_life_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
-	graded_solution.emit()
+	AchievementsManager.increment_real_life_problems_solved()
 
 
 #----------------------Manual popups controls--------------------------
@@ -243,7 +247,7 @@ func _on_bye_button_pressed() -> void:
 func _on_checkout_button_show_problem() -> void:
 	if currentProblem is not MinigameProblem:
 		return
-	var minigame_scene = load("res://scenes/minigame/MiniGame.tscn")
+	var minigame_scene := load("res://scenes/minigame/MiniGame.tscn")
 	var minigame = minigame_scene.instantiate()
 	minigame.name = "MinigameInstance"
 	minigame.MinigameOver.connect(_on_minigame_finished)
@@ -254,3 +258,12 @@ func _on_minigame_finished(minigame_score:int):
 	GameInfo.increment_problems_solved()
 	score+=minigame_score
 	graded_solution.emit()
+	
+func _on_new_achievement_unlocked(accessory: AccessoryData):
+	var achievement_notification_scene := load("res://scenes/notifications/AchievementUnlockedScene.tscn")
+	var achievement_notif: Node = achievement_notification_scene.instantiate()
+	achievement_notif.name = "AchievementNotificationInstance"
+	add_child(achievement_notif)
+	achievement_notif.initialize(accessory)
+	# Adding it here (to the root) makes it start at the top-left of the screen
+	
