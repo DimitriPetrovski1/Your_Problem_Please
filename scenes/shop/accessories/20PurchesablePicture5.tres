@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://du1y5b0ixiqc"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_a0nvy"]
+[ext_resource type="Texture2D" uid="uid://r7ilgqkgjy8u" path="res://assets/rewards/Picture5.png" id="2_a0nvy"]
+
+[resource]
+script = ExtResource("1_a0nvy")
+id = "20"
+name = "Rocket Picture"
+price = 250
+texture = ExtResource("2_a0nvy")
+desk_position = Vector2(50, 50)
+purchasable = true
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

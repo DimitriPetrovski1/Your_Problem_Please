@@ -1,10 +1,11 @@
-[gd_scene load_steps=48 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=74 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
 [ext_resource type="Texture2D" uid="uid://dypfrlw285mk6" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
 [ext_resource type="Texture2D" uid="uid://gwhcj4p0r76b" path="res://assets/UI/Popup Panels/Right Panel - Email.png" id="6_8kcot"]
+[ext_resource type="Texture2D" uid="uid://r7q6067gf6t7" path="res://assets/misc_sprites/Desk.png" id="6_64sq4"]
 [ext_resource type="Texture2D" uid="uid://dwympexmcckpi" path="res://assets/characters/Single_Kid_Sprite_1.png" id="6_amqq1"]
 [ext_resource type="Script" uid="uid://ckl081hts2jol" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
 [ext_resource type="Script" uid="uid://b81f7cnxwrxmd" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
@@ -14,19 +15,65 @@
 [ext_resource type="Script" uid="uid://bj8r0b1re16st" path="res://scenes/bye_button.gd" id="11_cfo66"]
 [ext_resource type="Script" uid="uid://b8nlq2sjpo1vc" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://47eax1b8dlr3" path="res://scenes/messages_node.gd" id="13_1sg7f"]
-[ext_resource type="Script" path="res://scenes/label.gd" id="14_8cuma"]
+[ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="14_8cuma"]
 [ext_resource type="Texture2D" uid="uid://cn6cyti88cn3f" path="res://assets/UI/Popup Panels/Right Panel - Message.png" id="14_ujqrd"]
 [ext_resource type="Script" uid="uid://jualthnwyhwc" path="res://scenes/real_life_node.gd" id="15_5my5b"]
+[ext_resource type="Texture2D" uid="uid://b6vp2qu2dnp6f" path="res://assets/misc_sprites/Right Panel - Wooden Desk.png" id="15_e7oxk"]
 [ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="15_lovhm"]
-[ext_resource type="Texture2D" uid="uid://bktpjte0h0eet" path="res://assets/UI/Popup Panels/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
+[ext_resource type="Texture2D" uid="uid://dtfopqk5avkyr" path="res://assets/UI/Popup Panels/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
 [ext_resource type="Texture2D" uid="uid://cnpmbhqmbc3tk" path="res://assets/UI/Popup Panels/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
-[ext_resource type="Script" path="res://scenes/accessories.gd" id="20_ypkrs"]
+[ext_resource type="Script" uid="uid://bkxkmx3ej5t00" path="res://scenes/accessories.gd" id="20_ypkrs"]
 [ext_resource type="Texture2D" uid="uid://bow0ip6a1lqmk" path="res://assets/rewards/BronzeMedal1.png" id="21_3ggs6"]
 [ext_resource type="Texture2D" uid="uid://vyl0mwpvy5cg" path="res://assets/UI/Buttons/Shop Button.png" id="21_wjgy3"]
 [ext_resource type="Texture2D" uid="uid://bh4krxrexulp0" path="res://assets/rewards/SilverMedal1.png" id="22_e7oxk"]
 [ext_resource type="Texture2D" uid="uid://b2l44p10xdfas" path="res://assets/UI/Buttons/Problem Button.png" id="23_3ggs6"]
 [ext_resource type="Texture2D" uid="uid://chvsow57macjr" path="res://assets/rewards/GoldMedal1.png" id="23_uvkju"]
 [ext_resource type="Texture2D" uid="uid://6qhj7tqonhkf" path="res://assets/UI/Buttons/Manual Button.png" id="25_uvkju"]
+[ext_resource type="Texture2D" uid="uid://riooxaxwqk11" path="res://assets/rewards/BronzeMedal2.png" id="26_wt1dx"]
+[ext_resource type="Texture2D" uid="uid://cqv6sopmvqk18" path="res://assets/rewards/SilverMedal2.png" id="27_fwuap"]
+[ext_resource type="Texture2D" uid="uid://cu0l13nrpaiqd" path="res://assets/rewards/GoldMedal2.png" id="28_yl14m"]
+[ext_resource type="Texture2D" uid="uid://bf7a2bwwi1s0u" path="res://assets/rewards/BronzeTrophy1.png" id="29_86oj1"]
+[ext_resource type="AudioStream" uid="uid://djdtvrboxghs3" path="res://assets/sound/music/MainGameMusic.mp3" id="29_uvkju"]
+[ext_resource type="Texture2D" uid="uid://bmdlaw6na860t" path="res://assets/rewards/SilverTrophy1.png" id="30_cfy8t"]
+[ext_resource type="Texture2D" uid="uid://cur0t26ojms27" path="res://assets/rewards/GoldTrophy1.png" id="31_b8uj0"]
+[ext_resource type="Texture2D" uid="uid://ideg7mo10dgv" path="res://assets/rewards/GoldCrown1.png" id="32_xwynf"]
+[ext_resource type="Texture2D" uid="uid://go1kigrr754c" path="res://assets/rewards/SilverCoin1.png" id="33_efyjb"]
+[ext_resource type="Texture2D" uid="uid://c4hikbrn60gy4" path="res://assets/rewards/GoldCoin1.png" id="34_qlckp"]
+[ext_resource type="Texture2D" uid="uid://bbwv2vld63vf0" path="res://assets/rewards/Helmet.png" id="35_cfy8t"]
+[ext_resource type="Texture2D" uid="uid://c0j6rcg6ortm6" path="res://assets/rewards/GameBoy1.png" id="35_lh5u4"]
+[ext_resource type="Texture2D" uid="uid://d5oxevtwelyt" path="res://assets/rewards/GameBoy2.png" id="36_wgabt"]
+[ext_resource type="Texture2D" uid="uid://57qaqnjhyqnv" path="res://assets/rewards/BlueBadge1.png" id="37_hcajb"]
+[ext_resource type="Texture2D" uid="uid://bfxp0hflt152y" path="res://assets/rewards/RedBadge1.png" id="38_pdx24"]
+[ext_resource type="Texture2D" uid="uid://b7ntwobs27hgc" path="res://assets/rewards/Picture1.png" id="39_gbsiq"]
+[ext_resource type="Texture2D" uid="uid://60xrcw3l6la7" path="res://assets/rewards/Picture2.png" id="40_bdo03"]
+[ext_resource type="Texture2D" uid="uid://ckexfsh4llsby" path="res://assets/rewards/Picture3.png" id="41_hcdn7"]
+[ext_resource type="Texture2D" uid="uid://dqwe6y6jacx8a" path="res://assets/rewards/Picture4.png" id="42_upplt"]
+[ext_resource type="Script" uid="uid://ds0de1vibj4cs" path="res://scenes/desk_accessories.gd" id="43_wgabt"]
+[ext_resource type="Texture2D" uid="uid://r7ilgqkgjy8u" path="res://assets/rewards/Picture5.png" id="43_ypueu"]
+[ext_resource type="Texture2D" uid="uid://cjslij5lum7bj" path="res://assets/rewards/Plant1.png" id="44_h10cl"]
+[ext_resource type="Texture2D" uid="uid://uje3m7bwvawn" path="res://assets/rewards/Plant2.png" id="45_ngf18"]
+[ext_resource type="Texture2D" uid="uid://odyljx82hfl" path="res://assets/rewards/Shield1.png" id="46_jima7"]
+[ext_resource type="Texture2D" uid="uid://bqvhkbj66k7kf" path="res://assets/rewards/Pencils1.png" id="48_pjb8r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ggs6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q2bx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5my5b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbj1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3fr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q73r7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lovhm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1sg7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi01h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfo66"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbj1o"]
 bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
@@ -50,28 +97,6 @@ bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypkrs"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ggs6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q2bx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amqq1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5my5b"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbj1o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3fr3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q73r7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lovhm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1sg7f"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi01h"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfo66"]
-
 [node name="GameplayScene1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -81,99 +106,163 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8kcot")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.38724923, 0.39594385, 0.80685467, 1)
-
-[node name="ManualPopupCanvasLayer" type="CanvasLayer" parent="."]
-layer = 3
-visible = false
-
-[node name="BackgroundButton" type="Button" parent="ManualPopupCanvasLayer"]
-offset_right = 1280.2661
-offset_bottom = 723.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-mouse_force_pass_scroll_events = false
-theme_override_styles/normal = SubResource("StyleBoxFlat_cbj1o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_k3fr3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_q73r7")
-theme_override_styles/focus = SubResource("StyleBoxFlat_lovhm")
-
-[node name="MenuBackgroundTR" type="TextureRect" parent="ManualPopupCanvasLayer/BackgroundButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -245.04688
-offset_top = -294.69647
-offset_right = 245.04688
-offset_bottom = 294.69647
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 0
-texture = ExtResource("17_cbj1o")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.041
-anchor_bottom = 0.034
-offset_left = 19.546875
-offset_top = 96.19647
-offset_right = 449.45303
-offset_bottom = 552.1571
-
-[node name="VScrollBar" type="VScrollBar" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/scroll = SubResource("StyleBoxEmpty_8cuma")
-theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_unebn")
-theme_override_styles/grabber = SubResource("StyleBoxEmpty_rjgxn")
-theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_wjgy3")
-theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_ypkrs")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer/VScrollBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-
-[node name="ManualLabel" type="Label" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR"]
-layout_mode = 0
-offset_left = 15.546875
-offset_top = 11.696472
-offset_right = 475.54688
-offset_bottom = 71.69647
-theme_override_font_sizes/font_size = 30
-text = "Email Manual"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="WaitingRoomPanelContainer" type="PanelContainer" parent="."]
+[node name="BackgroundTR" type="TextureRect" parent="."]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 1280.0
 offset_bottom = 720.0
-size_flags_vertical = 3
-
-[node name="BackgroundTR" type="TextureRect" parent="WaitingRoomPanelContainer"]
-layout_mode = 2
 texture = ExtResource("4_yi01h")
 expand_mode = 1
+
+[node name="WallAccessories" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("43_wgabt")
+
+[node name="0" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 27.0
+offset_right = 91.987656
+offset_bottom = 122.0
+texture = ExtResource("21_3ggs6")
+expand_mode = 3
+
+[node name="1" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 28.0
+offset_right = 159.98766
+offset_bottom = 123.0
+texture = ExtResource("22_e7oxk")
+expand_mode = 3
+
+[node name="2" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 27.0
+offset_right = 225.15475
+offset_bottom = 122.0
+texture = ExtResource("23_uvkju")
+expand_mode = 3
+
+[node name="3" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 133.0
+offset_right = 93.987656
+offset_bottom = 228.0
+texture = ExtResource("26_wt1dx")
+expand_mode = 3
+
+[node name="4" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 132.0
+offset_right = 162.98766
+offset_bottom = 227.0
+texture = ExtResource("27_fwuap")
+expand_mode = 3
+
+[node name="5" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 132.0
+offset_right = 229.98766
+offset_bottom = 227.0
+texture = ExtResource("28_yl14m")
+expand_mode = 3
+
+[node name="10" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 211.0
+offset_right = 161.0
+offset_bottom = 364.58447
+texture = ExtResource("33_efyjb")
+
+[node name="11" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 212.0
+offset_right = 260.0
+offset_bottom = 365.58447
+texture = ExtResource("34_qlckp")
+
+[node name="14" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 28.0
+offset_right = 344.0
+offset_bottom = 148.97412
+texture = ExtResource("37_hcajb")
+
+[node name="15" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 28.0
+offset_right = 432.0
+offset_bottom = 155.2858
+texture = ExtResource("38_pdx24")
+
+[node name="16" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 8.0
+offset_right = 1247.0
+offset_bottom = 157.37674
+texture = ExtResource("39_gbsiq")
+
+[node name="17" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 5.0
+offset_right = 1004.0
+offset_bottom = 156.4806
+texture = ExtResource("40_bdo03")
+
+[node name="18" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 95.0
+offset_right = 1144.0
+offset_bottom = 251.0
+texture = ExtResource("41_hcdn7")
+
+[node name="19" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 851.0
+offset_top = 204.0
+offset_right = 1017.0
+offset_bottom = 361.0
+texture = ExtResource("42_upplt")
+
+[node name="20" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 1073.0
+offset_top = 198.0
+offset_right = 1247.0
+offset_bottom = 381.03906
+texture = ExtResource("43_ypueu")
+
+[node name="23" type="TextureRect" parent="WallAccessories"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 116.0
+offset_right = 437.0
+offset_bottom = 352.68845
+texture = ExtResource("46_jima7")
+
+[node name="WaitingRoomPanelContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_vertical = 3
 
 [node name="CustomerSprite" type="Sprite2D" parent="WaitingRoomPanelContainer"]
 position = Vector2(639.3749, 419.77496)
@@ -181,10 +270,23 @@ scale = Vector2(4.416666, 4.416666)
 texture = ExtResource("6_amqq1")
 script = ExtResource("7_bnjt7")
 
+[node name="TextureRect" type="TextureRect" parent="WaitingRoomPanelContainer"]
+layout_mode = 0
+offset_top = 562.0
+offset_right = 1278.0
+offset_bottom = 718.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("6_64sq4")
+expand_mode = 1
+
 [node name="TextBubble" type="TextureRect" parent="WaitingRoomPanelContainer"]
 custom_minimum_size = Vector2(500, 350)
 layout_direction = 4
-layout_mode = 2
+layout_mode = 0
+offset_left = 780.0
+offset_right = 1280.0
+offset_bottom = 350.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 texture = ExtResource("4_vfncy")
@@ -264,6 +366,97 @@ text = "Bye Bye"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="DeskAccessories" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("20_ypkrs")
+
+[node name="6" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 491.3507
+offset_right = 279.3086
+offset_bottom = 622.11694
+texture = ExtResource("29_86oj1")
+
+[node name="7" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 489.3507
+offset_right = 371.3086
+offset_bottom = 620.11694
+texture = ExtResource("30_cfy8t")
+
+[node name="8" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 476.0
+offset_right = 473.0
+offset_bottom = 620.11694
+texture = ExtResource("31_b8uj0")
+
+[node name="9" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 437.0
+offset_right = 646.0
+offset_bottom = 660.01306
+texture = ExtResource("32_xwynf")
+
+[node name="12" type="TextureRect" parent="DeskAccessories"]
+z_index = 1
+layout_mode = 0
+offset_left = 932.0
+offset_top = 519.0
+offset_right = 1059.0
+offset_bottom = 652.5975
+texture = ExtResource("35_lh5u4")
+
+[node name="13" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 447.0
+offset_right = 1064.0
+offset_bottom = 619.51965
+texture = ExtResource("36_wgabt")
+
+[node name="21" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 1115.0
+offset_top = 418.0
+offset_right = 1304.0
+offset_bottom = 614.7144
+texture = ExtResource("44_h10cl")
+
+[node name="22" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 1021.0
+offset_top = 424.0
+offset_right = 1192.0
+offset_bottom = 603.88324
+texture = ExtResource("45_ngf18")
+
+[node name="24" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 447.0
+offset_right = 812.0
+offset_bottom = 663.7014
+texture = ExtResource("35_cfy8t")
+
+[node name="25" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 479.0
+offset_right = 909.0
+offset_bottom = 619.9611
+texture = ExtResource("48_pjb8r")
+
 [node name="RightPanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -271,9 +464,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -379.5
+offset_left = -356.75
 offset_top = -360.0
-offset_right = 379.5
+offset_right = 356.75
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -302,6 +495,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = -30
 
 [node name="EmailDisplayPanel" type="Panel" parent="RightPanelContainer/EmailNode/VBoxContainer"]
 layout_mode = 2
@@ -316,8 +510,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -7.0
-offset_top = -11.006531
+offset_top = -33.413116
 offset_right = 15.0
+offset_bottom = -3.0517578e-05
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_8kcot")
@@ -360,17 +555,17 @@ theme_override_font_sizes/font_size = 26
 text = "Subject example"
 autowrap_mode = 3
 
-[node name="EmailSelectionPanel" type="Panel" parent="RightPanelContainer/EmailNode/VBoxContainer"]
+[node name="EmailSelectionPanel" type="TextureRect" parent="RightPanelContainer/EmailNode/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
+texture = ExtResource("15_e7oxk")
 
 [node name="EmailSelectionContainer" type="VBoxContainer" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = -25.00653
+offset_left = -0.5
+offset_top = 4.5868835
 offset_right = 496.0
-offset_bottom = 227.99347
+offset_bottom = 244.58688
 
 [node name="EmailSubmitSolutionButton" type="TextureButton" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel"]
 layout_mode = 1
@@ -427,6 +622,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = -30
 
 [node name="MessagesDisplayPanel" type="Panel" parent="RightPanelContainer/MessagesNode/VBoxContainer"]
 layout_mode = 2
@@ -440,6 +636,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -37.413116
+offset_bottom = 15.586914
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_ujqrd")
@@ -492,17 +690,18 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Hi im Jameela jamil"
 
-[node name="MessagesSelectionPanel" type="Panel" parent="RightPanelContainer/MessagesNode/VBoxContainer"]
+[node name="MessagesSelectionPanel" type="TextureRect" parent="RightPanelContainer/MessagesNode/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
+texture = ExtResource("15_e7oxk")
+expand_mode = 2
 
 [node name="MessagesSelectionContainer" type="VBoxContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel"]
 layout_mode = 0
 offset_left = 16.0
-offset_top = -16.00653
+offset_top = 1.5868835
 offset_right = 501.0
-offset_bottom = 217.99347
+offset_bottom = 247.58688
 
 [node name="MessagesSubmitSolutionButton" type="TextureButton" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel"]
 layout_mode = 1
@@ -555,6 +754,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = -30
 
 [node name="RealLifeDisplayPanel" type="Panel" parent="RightPanelContainer/RealLifeNode/VBoxContainer"]
 layout_mode = 2
@@ -568,6 +768,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -11.944275
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("16_cbj1o")
@@ -576,29 +777,29 @@ stretch_mode = 5
 
 [node name="RealLifeTextLabel" type="Label" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeDisplayPanel"]
 layout_mode = 0
-offset_left = 70.0
-offset_top = 43.0
-offset_right = 507.0
-offset_bottom = 365.0
+offset_left = 71.0
+offset_top = 52.055725
+offset_right = 562.0
+offset_bottom = 438.05573
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 41
+theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yi01h")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cfo66")
 text = "Lorem ipsum Lorem ipsum dolor ahmet or wtevrrrrLorem ipsum Lorem ipsum dolor ahmet or wtevrrrrLorem ipsum Lorem ipsum dolor ahmet or wtevrrrr"
 autowrap_mode = 3
 
-[node name="RealLifeLelectionPanel" type="Panel" parent="RightPanelContainer/RealLifeNode/VBoxContainer"]
+[node name="RealLifeLelectionPanel" type="TextureRect" parent="RightPanelContainer/RealLifeNode/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
+texture = ExtResource("15_e7oxk")
 
 [node name="RealLifeSelectionContainer" type="VBoxContainer" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel"]
 layout_mode = 0
 offset_left = 16.0
-offset_top = -22.0
+offset_top = 2.055725
 offset_right = 499.0
-offset_bottom = 233.0
+offset_bottom = 248.05573
 
 [node name="RealLifeSubmitSolutionButton" type="TextureButton" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel"]
 layout_mode = 1
@@ -634,36 +835,12 @@ text = "Submit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Accessories" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 32.0
-offset_right = 243.0
-offset_bottom = 127.0
-theme_override_constants/separation = 10
-script = ExtResource("20_ypkrs")
-
-[node name="0" type="TextureRect" parent="Accessories"]
-layout_mode = 2
-texture = ExtResource("21_3ggs6")
-expand_mode = 3
-
-[node name="1" type="TextureRect" parent="Accessories"]
-layout_mode = 2
-texture = ExtResource("22_e7oxk")
-expand_mode = 3
-
-[node name="2" type="TextureRect" parent="Accessories"]
-layout_mode = 2
-texture = ExtResource("23_uvkju")
-expand_mode = 3
-
 [node name="Money" type="Label" parent="."]
 layout_mode = 0
-offset_left = 198.0
-offset_top = 587.0
-offset_right = 352.0
-offset_bottom = 625.0
+offset_left = 1109.0
+offset_top = 604.0
+offset_right = 1263.0
+offset_bottom = 642.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.7882353, 0.38431373, 0, 1)
@@ -672,7 +849,7 @@ theme_override_font_sizes/font_size = 32
 text = "Money Spot"
 script = ExtResource("14_8cuma")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="UI_Buttons" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 372.0
@@ -680,23 +857,98 @@ offset_right = 176.0
 offset_bottom = 702.0
 theme_override_constants/separation = 15
 
-[node name="Open Shop Button" type="TextureButton" parent="VBoxContainer"]
+[node name="Open Shop Button" type="TextureButton" parent="UI_Buttons"]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 texture_normal = ExtResource("21_wjgy3")
 stretch_mode = 0
 
-[node name="Open Problem Button" type="TextureButton" parent="VBoxContainer"]
+[node name="Open Problem Button" type="TextureButton" parent="UI_Buttons"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture_normal = ExtResource("23_3ggs6")
 stretch_mode = 0
 
-[node name="Open Manual Button" type="TextureButton" parent="VBoxContainer"]
+[node name="Open Manual Button" type="TextureButton" parent="UI_Buttons"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture_normal = ExtResource("25_uvkju")
 stretch_mode = 0
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_uvkju")
+
+[node name="ManualPopupCanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+
+[node name="BackgroundButton" type="Button" parent="ManualPopupCanvasLayer"]
+offset_right = 1280.2661
+offset_bottom = 723.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbj1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k3fr3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q73r7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lovhm")
+
+[node name="MenuBackgroundTR" type="TextureRect" parent="ManualPopupCanvasLayer/BackgroundButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.04688
+offset_top = -294.69647
+offset_right = 245.04688
+offset_bottom = 294.69647
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("17_cbj1o")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.041
+anchor_bottom = 0.034
+offset_left = 19.546875
+offset_top = 96.19647
+offset_right = 449.45303
+offset_bottom = 552.1571
+
+[node name="VScrollBar" type="VScrollBar" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_8cuma")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_unebn")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_rjgxn")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_wjgy3")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_ypkrs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer/VScrollBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+
+[node name="ManualLabel" type="Label" parent="ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR"]
+layout_mode = 0
+offset_left = 15.546875
+offset_top = 11.696472
+offset_right = 475.54688
+offset_bottom = 71.69647
+theme_override_font_sizes/font_size = 30
+text = "Email Manual"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble" method="_on_gameplay_scene_1_graded_solution"]
 [connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]
@@ -707,7 +959,6 @@ stretch_mode = 0
 [connection signal="newProblem" from="." to="RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="button_down" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_button_down"]
 [connection signal="character_exited" from="WaitingRoomPanelContainer/CustomerSprite" to="." method="_on_customer_sprite_character_exited"]
 [connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
 [connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]
@@ -727,8 +978,9 @@ stretch_mode = 0
 [connection signal="pressed" from="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton" to="RightPanelContainer/MessagesNode" method="_on_messages_submit_solution_button_pressed"]
 [connection signal="submitSelection" from="RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
 [connection signal="pressed" from="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Open Shop Button" to="." method="_on_open_shop_button_pressed"]
-[connection signal="button_down" from="VBoxContainer/Open Problem Button" to="RightPanelContainer/EmailNode" method="_on_open_problem_button"]
-[connection signal="button_down" from="VBoxContainer/Open Problem Button" to="RightPanelContainer/MessagesNode" method="_on_open_problem_button"]
-[connection signal="button_down" from="VBoxContainer/Open Problem Button" to="RightPanelContainer/RealLifeNode" method="_on_open_problem_button"]
-[connection signal="button_up" from="VBoxContainer/Open Manual Button" to="." method="_on_open_manual_button"]
+[connection signal="pressed" from="UI_Buttons/Open Shop Button" to="." method="_on_open_shop_button_pressed"]
+[connection signal="button_down" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/EmailNode" method="_on_open_problem_button"]
+[connection signal="button_down" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/MessagesNode" method="_on_open_problem_button"]
+[connection signal="button_down" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/RealLifeNode" method="_on_open_problem_button"]
+[connection signal="button_up" from="UI_Buttons/Open Manual Button" to="." method="_on_open_manual_button"]
+[connection signal="button_down" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_button_down"]

@@ -16,7 +16,7 @@ var shop_scene = preload("res://scenes/shop/Shop.tscn")
 
 var score:int = 0 
 @onready var accessory_container = $Accessories # The parent node of all your sprites
-
+@onready var music_player = $MusicPlayer
 
 #----------------- Initialising databases -----------------
 func initCharacterDB():
@@ -97,7 +97,8 @@ func pickProblem() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#update_accessory_visibility()	
+	#update_accessory_visibility()
+	music_player.play()
 	initCharacterDB()
 	initProblemDB()
 	GameInfo.set_minigame_problem_no(randi_range(0,problems_per_day-1))

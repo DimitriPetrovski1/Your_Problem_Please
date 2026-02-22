@@ -50,11 +50,8 @@ func _ready():
 		var tex_rect = TextureRect.new()
 		tex_rect.texture = accessory.texture
 		tex_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		# This mode centers the image within the node's bounds automatically
 		tex_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		# We make the node fill the entire frame_anchor area
 		tex_rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		# Optional: Add a small margin so the accessory doesn't touch the frame edges
 		if accessory.id not in ShopGameData.owned_items:
 			tex_rect.modulate = Color(1,1,1,0.5)
 		else:
@@ -69,14 +66,35 @@ func _ready():
 		# --- THE BUTTON ---
 		var btn = Button.new()
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER 
+		btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 		btn.custom_minimum_size.y = 80
 		btn.custom_minimum_size.x = 120
 		btn.set_meta("accessory", accessory)
-		btn.pressed.connect(_on_shop_item_pressed.bind(btn))
+
+		if accessory.purchasable == false and accessory.id not in ShopGameData.owned_items:
+			btn.disabled = true
+			# Invisible overlay to catch clicks on the disabled button
+			var overlay = Button.new()
+			overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
+			overlay.flat = true
+			overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+			overlay.pressed.connect(_show_requirements_popup.bind(accessory))
+			btn.add_child(overlay)
+		else:
+			btn.pressed.connect(_on_shop_item_pressed.bind(btn))
+
 		item_container.add_child(btn)
 	
 	_update_buttons()
+
+func _show_requirements_popup(accessory: AccessoryData) -> void:
+	var popup = AcceptDialog.new()
+	popup.title = "Locked!"
+	popup.dialog_text = "How to unlock:\n%s" % accessory.obtainability_requirement_description # Change to whatever your field is called
+	popup.confirmed.connect(popup.queue_free)
+	popup.canceled.connect(popup.queue_free)
+	add_child(popup)
+	popup.popup_centered()
 
 func _on_shop_item_pressed(btn: Button):
 	var accessory: AccessoryData = btn.get_meta("accessory")
@@ -114,11 +132,10 @@ func _update_buttons():
 				btn.text = "Equip"
 		else:
 			tex_rect.modulate.a = 0.5 # Faded when not owned
-			btn.text = accessory.name + "\n$" + str(accessory.price)
-		
-
-#func _on_background_back_button_pressed() -> void:
-#	queue_free()
+			if accessory.purchasable == false:
+				btn.text = "Requirements"
+			else:
+				btn.text = accessory.name + "\n$" + str(accessory.price)
 
 
 func _on_button_pressed() -> void:

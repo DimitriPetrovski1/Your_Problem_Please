@@ -5,11 +5,9 @@
 
 [resource]
 script = ExtResource("1_5c58k")
-id = "26"
+id = "7"
 name = "Silver Trophy 1"
-price = 50
 texture = ExtResource("2_5c58k")
 desk_position = Vector2(50, 50)
+obtainability_requirement_description = "Help friends with messages 10 times"
 metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
-purchasable = true
-obtainability_requirement_description="Can be purchased in the store"

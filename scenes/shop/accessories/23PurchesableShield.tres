@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://c2vru55045shv"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_jdtdp"]
+[ext_resource type="Texture2D" uid="uid://odyljx82hfl" path="res://assets/rewards/Shield1.png" id="2_jdtdp"]
+
+[resource]
+script = ExtResource("1_jdtdp")
+id = "23"
+name = "Shield"
+price = 500
+texture = ExtResource("2_jdtdp")
+desk_position = Vector2(50, 50)
+purchasable = true
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
