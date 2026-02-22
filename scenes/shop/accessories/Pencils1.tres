@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://booxrl2r5lqow"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_k5nop"]
+[ext_resource type="Texture2D" uid="uid://bqvhkbj66k7kf" path="res://assets/rewards/Pencils1.png" id="2_k5nop"]
+
+[resource]
+script = ExtResource("1_k5nop")
+id = "14"
+name = "Penciles1"
+price = 50
+texture = ExtResource("2_k5nop")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://c6ejsgyuw3tdu"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_yyvnf"]
+[ext_resource type="Texture2D" uid="uid://cqv6sopmvqk18" path="res://assets/rewards/SilverMedal2.png" id="2_yyvnf"]
+
+[resource]
+script = ExtResource("1_yyvnf")
+id = "25"
+name = "Silver Medal 2"
+price = 50
+texture = ExtResource("2_yyvnf")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

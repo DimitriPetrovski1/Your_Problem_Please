@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://611evv8gkgiu"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_a1tph"]
+[ext_resource type="Texture2D" uid="uid://bbwv2vld63vf0" path="res://assets/rewards/Helmet.png" id="2_a1tph"]
+
+[resource]
+script = ExtResource("1_a1tph")
+id = "12"
+name = "Knight Helmet"
+price = 50
+texture = ExtResource("2_a1tph")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

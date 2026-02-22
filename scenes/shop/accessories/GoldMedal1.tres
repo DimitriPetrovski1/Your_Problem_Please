@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_jy5d6")
 id = "2"
-name = "Gold Trophy 1"
+name = "Gold Medal 1"
 price = 100
 texture = ExtResource("2_vyau8")
 desk_position = Vector2(20, 20)

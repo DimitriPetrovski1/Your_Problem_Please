@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://c5fvyiho6dft7"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_hvw4n"]
+[ext_resource type="Texture2D" uid="uid://go1kigrr754c" path="res://assets/rewards/SilverCoin1.png" id="2_hvw4n"]
+
+[resource]
+script = ExtResource("1_hvw4n")
+id = "24"
+name = "Silver Coin 1"
+price = 50
+texture = ExtResource("2_hvw4n")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

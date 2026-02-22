@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://cvorag0tf85b1"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_ga3ic"]
+[ext_resource type="Texture2D" uid="uid://cvgrjbugto1oi" path="res://assets/rewards/Mug1.png" id="2_ga3ic"]
+
+[resource]
+script = ExtResource("1_ga3ic")
+id = "13"
+name = "Mug 1"
+price = 50
+texture = ExtResource("2_ga3ic")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://c8f543crnvxeq"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_gmr1v"]
+[ext_resource type="Texture2D" uid="uid://bfxp0hflt152y" path="res://assets/rewards/RedBadge1.png" id="2_gmr1v"]
+
+[resource]
+script = ExtResource("1_gmr1v")
+id = "22"
+name = "Red Badge 2"
+price = 50
+texture = ExtResource("2_gmr1v")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"

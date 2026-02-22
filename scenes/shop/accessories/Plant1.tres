@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://cgk8660l54skw"]
+
+[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_23n86"]
+[ext_resource type="Texture2D" uid="uid://cjslij5lum7bj" path="res://assets/rewards/Plant1.png" id="2_23n86"]
+
+[resource]
+script = ExtResource("1_23n86")
+id = "20"
+name = "Plant 1"
+price = 50
+texture = ExtResource("2_23n86")
+desk_position = Vector2(50, 50)
+metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
