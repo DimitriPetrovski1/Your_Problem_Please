@@ -9,7 +9,7 @@ func _refresh_accessories():
 		# Ensure the node is actually visible to the engine logic
 		accessory_node.show() 
 		
-		if accessory_node.name in ShopGameData.equipped_items:
+		if accessory_node.name in ShopGameData.owned_items and accessory_node.name in ShopGameData.equipped_items:
 			# Fully visible (Opaque)
 			accessory_node.modulate.a = 1.0
 		else:

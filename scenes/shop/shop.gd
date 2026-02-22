@@ -68,7 +68,7 @@ func _ready():
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 		btn.custom_minimum_size.y = 80
-		btn.custom_minimum_size.x = 120
+		btn.custom_minimum_size.x = 100
 		btn.set_meta("accessory", accessory)
 
 		if accessory.purchasable == false and accessory.id not in ShopGameData.owned_items:

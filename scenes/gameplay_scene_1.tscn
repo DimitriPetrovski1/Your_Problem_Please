@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
 [ext_resource type="Texture2D" uid="uid://dypfrlw285mk6" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
 [ext_resource type="Texture2D" uid="uid://gwhcj4p0r76b" path="res://assets/UI/Popup Panels/Right Panel - Email.png" id="6_8kcot"]
-[ext_resource type="Texture2D" uid="uid://r7q6067gf6t7" path="res://assets/misc_sprites/Desk.png" id="6_64sq4"]
+[ext_resource type="Texture2D" uid="uid://bgupoklfn84rm" path="res://assets/misc_sprites/Desk.png" id="6_64sq4"]
 [ext_resource type="Texture2D" uid="uid://dwympexmcckpi" path="res://assets/characters/Single_Kid_Sprite_1.png" id="6_amqq1"]
 [ext_resource type="Script" uid="uid://ckl081hts2jol" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
 [ext_resource type="Script" uid="uid://b81f7cnxwrxmd" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cqv6sopmvqk18" path="res://assets/rewards/SilverMedal2.png" id="27_fwuap"]
 [ext_resource type="Texture2D" uid="uid://cu0l13nrpaiqd" path="res://assets/rewards/GoldMedal2.png" id="28_yl14m"]
 [ext_resource type="Texture2D" uid="uid://bf7a2bwwi1s0u" path="res://assets/rewards/BronzeTrophy1.png" id="29_86oj1"]
-[ext_resource type="AudioStream" uid="uid://djdtvrboxghs3" path="res://assets/sound/music/MainGameMusic.mp3" id="29_uvkju"]
+[ext_resource type="AudioStream" uid="uid://cpnd22m8q16kg" path="res://assets/sound/music/MainGameMusic.mp3" id="29_uvkju"]
 [ext_resource type="Texture2D" uid="uid://bmdlaw6na860t" path="res://assets/rewards/SilverTrophy1.png" id="30_cfy8t"]
 [ext_resource type="Texture2D" uid="uid://cur0t26ojms27" path="res://assets/rewards/GoldTrophy1.png" id="31_b8uj0"]
 [ext_resource type="Texture2D" uid="uid://ideg7mo10dgv" path="res://assets/rewards/GoldCrown1.png" id="32_xwynf"]
@@ -408,15 +408,6 @@ offset_right = 646.0
 offset_bottom = 660.01306
 texture = ExtResource("32_xwynf")
 
-[node name="12" type="TextureRect" parent="DeskAccessories"]
-z_index = 1
-layout_mode = 0
-offset_left = 932.0
-offset_top = 519.0
-offset_right = 1059.0
-offset_bottom = 652.5975
-texture = ExtResource("35_lh5u4")
-
 [node name="13" type="TextureRect" parent="DeskAccessories"]
 layout_mode = 0
 offset_left = 900.0
@@ -424,6 +415,14 @@ offset_top = 447.0
 offset_right = 1064.0
 offset_bottom = 619.51965
 texture = ExtResource("36_wgabt")
+
+[node name="12" type="TextureRect" parent="DeskAccessories"]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 519.0
+offset_right = 1059.0
+offset_bottom = 652.5975
+texture = ExtResource("35_lh5u4")
 
 [node name="21" type="TextureRect" parent="DeskAccessories"]
 layout_mode = 0
@@ -603,7 +602,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MessagesNode" type="Control" parent="RightPanelContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("13_1sg7f")
 
@@ -636,20 +634,19 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -37.413116
-offset_bottom = 15.586914
+offset_top = -5.4131165
+offset_bottom = -12.413116
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_ujqrd")
 expand_mode = 5
-stretch_mode = 5
 
 [node name="ScrollContainer" type="ScrollContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 137.99347
-offset_right = 663.98376
-offset_bottom = 391.98694
+offset_right = 652.5
+offset_bottom = 394.58688
 
 [node name="VerticallScrollableContainer" type="VScrollBar" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer"]
 layout_mode = 2
@@ -662,8 +659,8 @@ max_value = 1000.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 211.0
+offset_bottom = 78.0
 
 [node name="PanelContainer" type="PanelContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer"]
 layout_mode = 2
@@ -736,6 +733,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RealLifeNode" type="Control" parent="RightPanelContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("15_5my5b")
 
@@ -979,8 +977,8 @@ vertical_alignment = 1
 [connection signal="submitSelection" from="RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
 [connection signal="pressed" from="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
 [connection signal="pressed" from="UI_Buttons/Open Shop Button" to="." method="_on_open_shop_button_pressed"]
-[connection signal="button_down" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/EmailNode" method="_on_open_problem_button"]
-[connection signal="button_down" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/MessagesNode" method="_on_open_problem_button"]
-[connection signal="button_down" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/RealLifeNode" method="_on_open_problem_button"]
+[connection signal="pressed" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/EmailNode" method="_on_open_problem_button_pressed"]
+[connection signal="pressed" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/MessagesNode" method="_on_open_problem_button_pressed"]
+[connection signal="pressed" from="UI_Buttons/Open Problem Button" to="RightPanelContainer/RealLifeNode" method="_on_open_problem_button_pressed"]
 [connection signal="button_up" from="UI_Buttons/Open Manual Button" to="." method="_on_open_manual_button"]
 [connection signal="button_down" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_button_down"]

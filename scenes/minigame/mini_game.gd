@@ -21,6 +21,7 @@ var payout_multiplier: int = 5 # $5 per successful click
 @onready var score_label = $HUD/PointAndLivesRect/VBoxPoints/PointsLabel
 @onready var lives_label = $HUD/PointAndLivesRect/VBoxLives/LivesLabel
 @onready var score_lives_rect = $HUD/PointAndLivesRect
+@onready var music_player = $MusicPlayer
 
 
 # --- GAME OVER UI ---
@@ -33,6 +34,7 @@ func _ready() -> void:
 	if ad_textures.is_empty():
 		_load_ads_from_folder()
 	
+	music_player.play()
 	# 2. Setup Timer
 	spawn_timer.timeout.connect(_spawn_ad)
 	spawn_timer.wait_time = 1.0
