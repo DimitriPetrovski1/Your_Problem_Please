@@ -10,7 +10,7 @@
 
 ## 🕹️ Play Now
 
-👉 **[Play in Browser](https://d1imitri.itch.io/your-problem-please) **
+👉 [Play in Browser](https://d1imitri.itch.io/your-problem-please)
 
 
 ---
