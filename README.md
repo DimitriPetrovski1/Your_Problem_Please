@@ -1,3 +1,4 @@
+🌐 English | [Македонски](README_mk.md)
 # 🖥️ Your Problem, Please
 
 > A cozy cyber-safety game where you sit at your desk and help friends navigate the dangers of the digital world.
