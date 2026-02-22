@@ -42,7 +42,7 @@ The more correct checkboxes you tick, the more **💰 money** you earn.
 
 | Category | Description |
 |----------|-------------|
-| 📧 **Email** | Analyse emails for phishing signs — dodgy senders, fake links, urgent language | <img width="776" height="184" alt="Your Problem, Please" src="https://github.com/user-attachments/assets/ca79df50-65e0-41e6-b357-677a5cba2c8d" /> |
+| 📧 **Email** | Analyse emails for phishing signs — dodgy senders, fake links, urgent language |
 | 💬 **Message** | Review texts or DMs for scams, impersonation, and social engineering |
 | 🌍 **Real Life** | Evaluate real-world scenarios involving cybersecurity threats |
 
