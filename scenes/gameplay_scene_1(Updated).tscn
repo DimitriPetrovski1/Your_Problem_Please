@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c48c275vfnbsl"]
 
-[ext_resource type="Texture2D" uid="uid://c6p03xhyqrbv3" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="1_exdhy"]
+[ext_resource type="Texture2D" uid="uid://dypfrlw285mk6" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="1_exdhy"]
 [ext_resource type="Texture2D" uid="uid://6qhj7tqonhkf" path="res://assets/UI/Buttons/Manual Button.png" id="2_4e24p"]
 [ext_resource type="Texture2D" uid="uid://b2l44p10xdfas" path="res://assets/UI/Buttons/Problem Button.png" id="3_rjphi"]
 [ext_resource type="Texture2D" uid="uid://vyl0mwpvy5cg" path="res://assets/UI/Buttons/Shop Button.png" id="4_f2sbj"]

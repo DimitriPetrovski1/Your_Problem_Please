@@ -15,7 +15,6 @@ var day_scene_path = "res://scenes/Day.tscn"
 var shop_scene = preload("res://scenes/shop/Shop.tscn")
 
 var score:int = 0 
-@onready var accessory_container = $Accessories # The parent node of all your sprites
 @onready var music_player = $MusicPlayer
 
 #----------------- Initialising databases -----------------
@@ -106,16 +105,6 @@ func _ready() -> void:
 	pickCharacter()
 	pickProblem()
 	
-
-#func update_accessory_visibility():
-	## Loop through every sprite inside the Accessories container
-	#for sprite in accessory_container.get_children():
-		## Check if the node's name is in the equipped_items array
-		#if sprite.name in ShopGameData.equipped_items:
-			#sprite.show() # or sprite.visible = true
-		#else:
-			#sprite.hide() # or sprite.visible = false
-
 
 #---------------Grading Selections and advancing to next case-------------------
 

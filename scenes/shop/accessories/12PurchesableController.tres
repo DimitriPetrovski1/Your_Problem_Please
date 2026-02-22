@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://bgtarttjl60vm"]
 
-[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_fabxt"]
+[ext_resource type="Script" uid="uid://cg226hbl3oopq" path="res://scripts/shop/AccessoryData.gd" id="1_fabxt"]
 [ext_resource type="Texture2D" uid="uid://c0j6rcg6ortm6" path="res://assets/rewards/GameBoy1.png" id="2_p0e8v"]
 
 [resource]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpedxy1v6cfyd"]
 
 [ext_resource type="Texture2D" uid="uid://duw3gbojw64y7" path="res://assets/ads/Burger2AdBanner.png" id="1_k7dgd"]
-[ext_resource type="Script" uid="uid://b6d5w6mxtmgu2" path="res://scenes/minigame/ad_banner.gd" id="2_fvtot"]
+[ext_resource type="Script" uid="uid://ciky8ov5whwfo" path="res://scenes/minigame/ad_banner.gd" id="2_fvtot"]
 [ext_resource type="Texture2D" uid="uid://dwo85ctqms84w" path="res://assets/UI/AdExitBUtton.png" id="3_fvtot"]
 
 [node name="Ad Banner" type="TextureRect"]

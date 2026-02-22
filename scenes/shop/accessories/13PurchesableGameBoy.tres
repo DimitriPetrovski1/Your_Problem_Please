@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://d2tok5urfti1t"]
 
-[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_ubim0"]
+[ext_resource type="Script" uid="uid://cg226hbl3oopq" path="res://scripts/shop/AccessoryData.gd" id="1_ubim0"]
 [ext_resource type="Texture2D" uid="uid://d5oxevtwelyt" path="res://assets/rewards/GameBoy2.png" id="2_ubim0"]
 
 [resource]
@@ -11,6 +11,5 @@ price = 200
 texture = ExtResource("2_ubim0")
 desk_position = Vector2(50, 50)
 purchasable = true
+obtainability_requirement_description = "Can be purchased in the store"
 metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
-purchasable = true
-obtainability_requirement_description="Can be purchased in the store"

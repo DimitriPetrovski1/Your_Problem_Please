@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://ohj5j2ud8fov"]
 
-[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_22gcb"]
+[ext_resource type="Script" uid="uid://cg226hbl3oopq" path="res://scripts/shop/AccessoryData.gd" id="1_22gcb"]
 [ext_resource type="Texture2D" uid="uid://bow0ip6a1lqmk" path="res://assets/rewards/BronzeMedal1.png" id="2_22gcb"]
 
 [resource]

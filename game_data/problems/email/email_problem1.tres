@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EmailProblem" load_steps=2 format=3 uid="uid://ctswedhpy6iq2"]
 
-[ext_resource type="Script" uid="uid://dk2x3qx2xd80y" path="res://scripts/problems/EmailProblem.gd" id="1_8e1gs"]
+[ext_resource type="Script" uid="uid://c8tfat28oksvo" path="res://scripts/problems/EmailProblem.gd" id="1_8e1gs"]
 
 [resource]
 script = ExtResource("1_8e1gs")

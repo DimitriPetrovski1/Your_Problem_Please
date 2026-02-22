@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://birsw7512km58"]
 
-[ext_resource type="Script" uid="uid://clvh53l445xbc" path="res://scenes/DayLabel.gd" id="1_xrevd"]
+[ext_resource type="Script" uid="uid://c6274b45c5hjb" path="res://scenes/DayLabel.gd" id="1_xrevd"]
 
 [node name="Day" type="CanvasLayer"]
 

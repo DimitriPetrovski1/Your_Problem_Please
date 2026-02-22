@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcflhdq7cd7uk"]
 
-[ext_resource type="Script" uid="uid://8wy2jg0uxb5r" path="res://scenes/notifications/achievement_unlocked_scene.gd" id="1_g82hd"]
+[ext_resource type="Script" uid="uid://207ewfmmithx" path="res://scenes/notifications/achievement_unlocked_scene.gd" id="1_g82hd"]
 [ext_resource type="FontFile" uid="uid://dj8l2pfcrqq10" path="res://assets/Fonts/ByteBounce.ttf" id="2_g82hd"]
 [ext_resource type="Texture2D" uid="uid://bx0nwl3nta8yb" path="res://assets/boss_sprite.png" id="3_tmi6g"]
 

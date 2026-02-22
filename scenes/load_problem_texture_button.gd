@@ -8,6 +8,6 @@ func _pressed() -> void:
 	visible = false
 
 
-func _on_gameplay_scene_1_new_problem(problem: Problem) -> void:
+func _on_gameplay_scene_1_new_problem(_problem: Problem) -> void:
 	disabled = false
 	visible = true

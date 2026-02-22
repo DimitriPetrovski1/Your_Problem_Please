@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AccessoryData" load_steps=3 format=3 uid="uid://bepbe5vdsulne"]
 
-[ext_resource type="Script" uid="uid://cpjr2h5x1ai8m" path="res://scripts/shop/AccessoryData.gd" id="1_nxduo"]
+[ext_resource type="Script" uid="uid://cg226hbl3oopq" path="res://scripts/shop/AccessoryData.gd" id="1_nxduo"]
 [ext_resource type="Texture2D" uid="uid://uje3m7bwvawn" path="res://assets/rewards/Plant2.png" id="2_nxduo"]
 
 [resource]
