@@ -15,8 +15,8 @@ var payout_multiplier: int = 5 # $5 per successful click
 @onready var bg = $"Website Background"
 @onready var ad_container = $"Ad Container"
 @onready var spawn_timer = $"Spawn Timer"
-@onready var score_label = $HUD/ScoreLabel
-@onready var lives_label = $HUD/LivesLabel
+@onready var score_label = $HUD/TextureRect/VBoxPoints/PointsLabel
+@onready var lives_label = $HUD/TextureRect/VBoxLives/LivesLabel
 
 func _ready() -> void:
 	# 1. Load textures from folder automatically if array is empty
@@ -33,10 +33,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	# Endless background scrolling logic
-	# Note: This assumes your Background TextureRect is set to "Tile" mode
 	bg.position.y -= scroll_speed * delta
 	
-	# Reset position for seamless loop
 	if bg.texture and bg.position.y <= -bg.texture.get_size().y:
 		bg.position.y = 0
 
@@ -64,23 +62,22 @@ func _spawn_ad():
 	# 1. Pick random texture
 	var random_tex = ad_textures.pick_random()
 	
-	# 2. Determine a random width (e.g., between 180 and 350 pixels)
-	var target_width = randf_range(150.0, 250.0)
+	# 2. NEW: Set a fixed height for all ads (adjust this number to your liking)
+	var fixed_height = 120.0 
 	
-	# 3. Setup the ad's texture and size (Calling the function in Ad.gd)
+	# 3. Setup the ad using the height (Ad.gd now handles width proportionally)
 	if new_ad.has_method("setup"):
-		new_ad.setup(random_tex, target_width)
+		new_ad.setup(random_tex, fixed_height)
 	
-	# 4. Position it horizontally (ensuring it stays on screen)
-	var screen_w = get_viewport_rect().size.x
-	var random_x = randf_range(0, ad_container.size.x - new_ad.size.x)
-	new_ad.position = Vector2(random_x, get_viewport_rect().size.y + 50)
+	# 4. Position it horizontally using your fixed points
+	var possible_x = [10, 150, 300, 450]
+	var selected_x = possible_x.pick_random()
+	new_ad.position = Vector2(selected_x, get_viewport_rect().size.y + 60)
 	
 	# 5. Set speed and connect signals
 	new_ad.speed = scroll_speed
 	new_ad.ad_closed.connect(_on_ad_success)
 	new_ad.ad_missed.connect(_on_ad_failure)
-	
 	
 	ad_container.add_child(new_ad)
 	
@@ -92,7 +89,6 @@ func _spawn_ad():
 func _on_ad_success():
 	score += 1
 	_update_ui()
-	# Increase difficulty slightly
 	scroll_speed += 5.0
 
 func _on_ad_failure():
@@ -102,25 +98,19 @@ func _on_ad_failure():
 		_game_over()
 
 func _update_ui():
-	pass
-	#score_label.text = "Clicks: " + str(score)
-	#lives_label.text = "Lives: " + str(lives)
+	# Update HUD labels if they are assigned
+	if score_label: score_label.text = str(score)
+	if lives_label: lives_label.text = str(lives)
 
 func _game_over():
-	# Stop everything
 	spawn_timer.stop()
 	set_process(false)
 	
-	# Calculate payout
 	var total_earned = score * payout_multiplier
 	ShopGameData.add_money(total_earned)
 	
 	print("Game Over! Earned: $", total_earned)
-	
-	# You can replace this with a Results Screen later
-	# For now, we just close the minigame
 	queue_free()
 
 func _on_quit_button_pressed():
-	# Optional manual exit
 	queue_free()
