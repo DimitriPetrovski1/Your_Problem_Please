@@ -60,6 +60,9 @@ Spend your earnings in the **Shop** to buy trinkets and accessories that decorat
 
 Some items **cannot be bought** — they are locked behind achievements and can only be earned through gameplay milestones.
 
+### 📖 Manual
+Feeling lost? The manual is always there to help you in your time of need
+
 ### 🏆 Rewards & Achievements
 Keep playing to unlock special rewards. These are earned through dedication and consistency, for example:
 
