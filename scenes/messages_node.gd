@@ -17,6 +17,11 @@ func buildSelectionSection(problem:MessagesProblem):
 	for option in problem.get_possible_choices():
 		var cb := CheckButton.new()
 		cb.text = option
+		cb.add_theme_color_override("font_color", Color.BLACK)
+		cb.add_theme_color_override("font_focus_color", Color.BLACK)
+		cb.add_theme_color_override("font_hover_color", Color.WHITE) 
+		cb.add_theme_color_override("font_pressed_color", Color.WHITE)
+		cb.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 		cb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		cb.add_theme_icon_override("checked",ResourceLoader.load("res://assets/UI/Checkmark Selected.png"))
 		cb.add_theme_icon_override("unchecked",ResourceLoader.load("res://assets/UI/Checkmark Unselected.png"))
