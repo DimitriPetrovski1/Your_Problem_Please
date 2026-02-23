@@ -190,17 +190,34 @@ func load_markdown(path: String) -> String:
 	return file.get_as_text()
 	
 func _on_open_manual_button():
-	var path = "res://game_data/menu/menu.md"
-	var file := FileAccess.open(path, FileAccess.READ)
-	if not file:
-		path = path+".import"
-	var md = load_markdown(path)
+	var dir_path = "res://game_data/menu/"
+	var target_file = ""
+	
+	var dir = DirAccess.open(dir_path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		
+		while file_name != "":
+			# Look for any file containing ".md" 
+			# This catches "manual.md", "manual.md.import", etc.
+			if not dir.current_is_dir() and file_name.contains(".md"):
+				# Strip .import or .remap so FileAccess/load can read it correctly
+				target_file = dir_path + file_name.replace(".import", "").replace(".remap", "")
+				break # Stop at the first one found
+			file_name = dir.get_next()
+	
+	if target_file == "":
+		push_error("No .md file found in " + dir_path)
+		return
+
+	# Now use your existing logic with the dynamic path
+	var md = load_markdown(target_file)
 	var bb = md_to_bbcode(md)
+	
 	$ManualPopupCanvasLayer.visible = true
 	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ManualLabel.text = "Menu"
 	$ManualPopupCanvasLayer/BackgroundButton/MenuBackgroundTR/ScrollContainer/VScrollBar/RichTextLabel.text = bb
-	#Sakav ovde da dodam avtomatsko menuvanje na fokusot na menito, no trebashe ko ushte edna skripta (: 
-
 func _on_background_button_button_down() -> void:
 	var canvas = $ManualPopupCanvasLayer
 	canvas.visible = false

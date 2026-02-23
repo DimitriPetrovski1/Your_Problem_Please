@@ -1,6 +1,6 @@
 [gd_scene load_steps=74 format=3 uid="uid://b5ktasytww183"]
 
-[ext_resource type="Script" uid="uid://bvm2qc4g8au74" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
+[ext_resource type="Script" uid="uid://bclj23gqkx17p" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
 [ext_resource type="Texture2D" uid="uid://dypfrlw285mk6" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://cxltr6cdm3nk5" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
 [ext_resource type="Script" uid="uid://beubcmxgwrdrc" path="res://scenes/texture_rect.gd" id="7_lovhm"]
 [ext_resource type="Texture2D" uid="uid://mgdljy4ydrat" path="res://assets/UI/Buttons/Blue Button.png" id="8_q73r7"]
-[ext_resource type="Script" uid="uid://c1q337ioe4uj2" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
+[ext_resource type="Script" uid="uid://60qrlrakim21" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
 [ext_resource type="Script" uid="uid://cj2s0hw6xedvw" path="res://scenes/bye_button.gd" id="11_cfo66"]
 [ext_resource type="Script" uid="uid://bnt5j1qu0ff2m" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://bgawgxtd8261b" path="res://scenes/messages_node.gd" id="13_1sg7f"]
@@ -812,6 +812,7 @@ offset_right = 326.4286
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
+texture_normal = ExtResource("15_lovhm")
 stretch_mode = 0
 
 [node name="RealLifeSubLabel" type="Label" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton"]
