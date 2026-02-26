@@ -23,6 +23,8 @@ var speed_multiplier_after_revive := 0.8
 @onready var score_label:Label = $HUD/PointAndLivesRect/VBoxPoints/PointsLabel
 @onready var lives_label:Label = $HUD/PointAndLivesRect/VBoxLives/LivesLabel
 @onready var score_lives_rect:TextureRect= $HUD/PointAndLivesRect
+@onready var ad_closed: AudioStreamPlayer = $AdClosePlayer
+@onready var ad_passed: AudioStreamPlayer = $AdPassedPlayer
 
 
 # --- GAME OVER UI ---
@@ -113,6 +115,7 @@ func _spawn_ad():
 
 # --- GAMEPLAY LOGIC ---
 func _on_ad_success():
+	ad_closed.play()
 	score += 1
 	_update_ui()
 	scroll_speed += scroll_speed_speedup
@@ -127,6 +130,7 @@ func end_game():
 	gotoEndScreen.emit(score,money_earned)
 
 func _on_ad_failure():
+	ad_passed.play()
 	lives -= 1
 	_update_ui()
 	if lives <= 0:
