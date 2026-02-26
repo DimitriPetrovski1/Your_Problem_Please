@@ -8,9 +8,20 @@
 
 ---
 
-## 🕹️ Play Now (Windows/Mac/Browser)
+## 🕹️ Play Now (Browser)
 
 👉 [Play in Browser](https://d1imitri.itch.io/your-problem-please)
+
+
+## Download(Windows/Linux/Mac)
+
+Download the game for your platform:
+
+- 🪟 Download on [Windows](https://github.com/DimitriPetrovski1/Your_Problem_Please/releases/download/1.0/your_problem_please_WINDOWS.exe)
+- 🐧 Download on [Linux](https://github.com/DimitriPetrovski1/Your_Problem_Please/releases/download/1.0/Unix.zip)
+- 🍎 Download on [macOS](https://github.com/DimitriPetrovski1/Your_Problem_Please/releases/download/1.0/Mac.zip)
+```
+
 👉 [Play on Windows]
 👉 [Play on Mac]
 👉 [Play on UNIX]
