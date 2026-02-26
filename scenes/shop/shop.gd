@@ -147,3 +147,7 @@ func _update_buttons():
 
 func _on_background_back_button_button_down() -> void:
 	queue_free()
+
+
+func _on_button_pressed() -> void:
+	ShopGameData.reset_shop()

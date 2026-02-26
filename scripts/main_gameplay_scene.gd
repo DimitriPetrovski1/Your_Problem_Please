@@ -238,7 +238,8 @@ func _on_open_shop_button_pressed() -> void:
 
 func _on_bye_button_pressed() -> void:
 	print(GameInfo.problems_solved_today)
-	if GameInfo.problems_solved_today == problems_per_day:
+	print("Problems solved today ", GameInfo.problems_solved_today)
+	if GameInfo.problems_solved_today >= problems_per_day:
 		GameInfo.reset_problems_solved()
 		Transition.transition_to(day_scene_path)
 		return

@@ -6,9 +6,8 @@
 [resource]
 script = ExtResource("1_co402")
 id = "25"
-name = "Helmet"
+name = "Pencils"
 price = 100
 texture = ExtResource("2_co402")
 desk_position = Vector2(50, 50)
 purchasable = true
-metadata/_custom_type_script = "uid://cpjr2h5x1ai8m"
