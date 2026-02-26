@@ -15,7 +15,7 @@ var day_scene_path = "res://scenes/Day.tscn"
 var shop_scene = preload("res://scenes/shop/Shop.tscn")
 
 var score:int = 0 
-@onready var music_player = $MusicPlayer
+@onready var music_player: AudioStreamPlayer = $MusicPlayer
 
 #----------------- Initialising databases -----------------
 func initCharacterDB():
@@ -100,6 +100,7 @@ func pickProblem() -> void:
 func _ready() -> void:
 	#update_accessory_visibility()
 	AchievementsManager.new_achievement_unlocked.connect(_on_new_achievement_unlocked)
+	music_player.stream.loop = true
 	music_player.play()
 	initCharacterDB()
 	initProblemDB()
@@ -249,6 +250,7 @@ func _on_checkout_button_show_problem() -> void:
 	if currentProblem is not MinigameProblem:
 		return
 	var minigame_scene := load("res://scenes/minigame/MiniGame.tscn")
+	music_player.stream_paused = true
 	var minigame = minigame_scene.instantiate()
 	minigame.name = "MinigameInstance"
 	minigame.MinigameOver.connect(_on_minigame_finished)
@@ -257,6 +259,7 @@ func _on_checkout_button_show_problem() -> void:
 	
 func _on_minigame_finished(minigame_score:int):
 	score+=minigame_score
+	music_player.stream_paused = false
 	graded_solution.emit()
 	
 func _on_new_achievement_unlocked(accessory: AccessoryData):
