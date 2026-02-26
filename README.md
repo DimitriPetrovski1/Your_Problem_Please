@@ -8,11 +8,12 @@
 
 ---
 
-## 🕹️ Play Now
+## 🕹️ Play Now (Windows/Mac/Browser)
 
 👉 [Play in Browser](https://d1imitri.itch.io/your-problem-please)
-
-
+👉 [Play on Windows]
+👉 [Play on Mac]
+👉 [Play on UNIX]
 ---
 
 ## 📸 Screenshots
