@@ -112,7 +112,6 @@ func _ready() -> void:
 
 
 func gradeSolution(solutions:Array[String])->void:
-	GameInfo.increment_problems_solved()
 	var correctChoices = currentProblem.get_correct_choices()
 	var newScoreDelta=0
 	for solution in solutions:
@@ -237,6 +236,7 @@ func _on_open_shop_button_pressed() -> void:
 
 
 func _on_bye_button_pressed() -> void:
+	GameInfo.increment_problems_solved()
 	print(GameInfo.problems_solved_today)
 	print("Problems solved today ", GameInfo.problems_solved_today)
 	if GameInfo.problems_solved_today >= problems_per_day:
@@ -256,7 +256,6 @@ func _on_checkout_button_show_problem() -> void:
 	add_child(minigame)
 	
 func _on_minigame_finished(minigame_score:int):
-	GameInfo.increment_problems_solved()
 	score+=minigame_score
 	graded_solution.emit()
 	
