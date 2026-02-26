@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://birsw7512km58"]
+[gd_scene load_steps=3 format=3 uid="uid://birsw7512km58"]
 
+[ext_resource type="FontFile" uid="uid://dj8l2pfcrqq10" path="res://assets/Fonts/ByteBounce.ttf" id="1_5xjgh"]
 [ext_resource type="Script" uid="uid://c6274b45c5hjb" path="res://scenes/DayLabel.gd" id="1_xrevd"]
 
 [node name="Day" type="CanvasLayer"]
@@ -10,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.37997112, 0.18132839, 0.09191736, 1)
+color = Color(0.49803922, 0.18039216, 0.09019608, 1)
 
 [node name="Label" type="Label" parent="ColorRect"]
 layout_mode = 1
@@ -19,6 +20,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_5xjgh")
+theme_override_font_sizes/font_size = 70
+text = "Test"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_xrevd")

@@ -24,7 +24,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_66ly0")
 script = ExtResource("1_x0e2f")
 
 [node name="PlayScreen" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,6 +33,7 @@ grow_vertical = 2
 script = ExtResource("1_re4xa")
 
 [node name="Website Background" type="TextureRect" parent="PlayScreen"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -130,7 +130,6 @@ stretch_mode = 5
 stream = ExtResource("6_n4xfe")
 
 [node name="EndScreen" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
@@ -172,6 +171,8 @@ offset_top = 251.0
 offset_right = 41.0
 offset_bottom = 274.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 40
 text = "Score: FILL"
 
 [node name="MoneyLabel" type="Label" parent="EndScreen/Background"]
@@ -184,6 +185,8 @@ offset_top = 360.0
 offset_right = 79.0
 offset_bottom = 383.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 50
 text = "Money Earned: FILL"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="EndScreen/Background"]
@@ -216,6 +219,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 40
 text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -233,9 +241,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 40
 text = "Revive: $50"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="StartScreen" type="Control" parent="."]
 visible = false
@@ -279,7 +293,8 @@ offset_top = 251.0
 offset_right = 41.0
 offset_bottom = 274.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 50
 text = "close all the ads 
 you have 3 lives"
 
@@ -313,6 +328,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 40
 text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -330,11 +350,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 30
 text = "I'll pass this time"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="CountdownScreen" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
