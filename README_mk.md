@@ -15,6 +15,17 @@
 
 ---
 
+## Преземете(Windows/Linux/Mac)
+
+Преземете ја играта за вашата платформа:
+
+- 🪟 Преземете за [Windows](https://github.com/DimitriPetrovski1/Your_Problem_Please/releases/download/1.0/your_problem_please_WINDOWS.exe)
+- 🐧 Преземете за [Linux](https://github.com/DimitriPetrovski1/Your_Problem_Please/releases/download/1.0/your_problem_please_UNIX.x86_64)
+- 🍎 Преземете за [macOS](https://github.com/DimitriPetrovski1/Your_Problem_Please/releases/download/1.0/your_problem_please_MAC.zip)
+
+
+---
+
 ## 📸 Слики од играта
 
 | Главно биро | Преглед на случај | Мини-игра со реклами |
