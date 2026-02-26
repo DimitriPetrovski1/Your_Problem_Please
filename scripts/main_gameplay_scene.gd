@@ -144,10 +144,12 @@ func _on_customer_sprite_character_exited() -> void:
 
 func _on_email_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
+	currentProblem = null
 	AchievementsManager.increment_email_problems_solved()
 
 func _on_messages_node_submit_selection(solutions: Array[String]) -> void:
 	gradeSolution(solutions)
+	currentProblem = null
 	AchievementsManager.increment_messages_problems_solved()
 
 func _on_real_life_node_submit_selection(solutions: Array[String]) -> void:

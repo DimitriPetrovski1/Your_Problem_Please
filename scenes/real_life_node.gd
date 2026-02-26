@@ -48,6 +48,8 @@ func _on_real_life_submit_solution_button_pressed() -> void:
 	
 	visible = false
 	submitSelection.emit(selections)
+	currProblem = null
+
 
 func _on_checkout_button_show_problem() -> void:
 	if currProblem is RealLifeProblem:

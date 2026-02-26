@@ -65,10 +65,11 @@ func _on_messages_submit_solution_button_pressed() -> void:
 	for cb in checkboxes:
 		if cb.button_pressed:
 			selections.append(cb.text)
-			
+	
 	
 	visible = false
 	submitSelection.emit(selections)
+	currProblem = null
 
 func _on_checkout_button_show_problem() -> void:
 	if currProblem is MessagesProblem:
