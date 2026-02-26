@@ -1,17 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1pp2qogukqgp"]
+[gd_scene load_steps=14 format=3 uid="uid://b1pp2qogukqgp"]
 
 [ext_resource type="Texture2D" uid="uid://wldmkkbupecl" path="res://assets/UI/Popup Panels/MinigamePopupPanel.png" id="1_pb5i6"]
-[ext_resource type="Script" uid="uid://c7m0h1eq2r6wp" path="res://scenes/minigame/mini_game.gd" id="1_re4xa"]
-[ext_resource type="Texture2D" uid="uid://cdv3t00qk5v0j" path="res://assets/UI/Popup Panels/MinigameWebpageBackground.png" id="2_diy0u"]
+[ext_resource type="Script" uid="uid://c3etcp44n5f66" path="res://scenes/minigame/mini_game.gd" id="1_re4xa"]
+[ext_resource type="Script" uid="uid://dq2vqg0rp2dir" path="res://scenes/minigame/mini_game_control.gd" id="1_x0e2f"]
+[ext_resource type="Texture2D" uid="uid://34hyhcw348kn" path="res://assets/UI/Popup Panels/MinigameWebpageBackground.png" id="2_diy0u"]
 [ext_resource type="FontFile" uid="uid://dj8l2pfcrqq10" path="res://assets/Fonts/ByteBounce.ttf" id="3_diy0u"]
 [ext_resource type="Texture2D" uid="uid://dj1qprqp6c0gh" path="res://assets/UI/Buttons/Brown Button.png" id="3_kxtkx"]
 [ext_resource type="AudioStream" uid="uid://dw3snji4fmpv7" path="res://assets/sound/music/MiniGameMusic.mp3" id="6_n4xfe"]
+[ext_resource type="Script" uid="uid://coudhk2fe02xr" path="res://scenes/minigame/end_screen.gd" id="8_fnal6"]
+[ext_resource type="Texture2D" uid="uid://dlll2d3xl1bvy" path="res://assets/UI/Buttons/Red Button.png" id="9_a6284"]
+[ext_resource type="Texture2D" uid="uid://c5agfpre6h22p" path="res://assets/UI/Buttons/Yellow Button.png" id="10_ic0pd"]
+[ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="12_n6p53"]
+[ext_resource type="Script" uid="uid://cnbichoae0nhd" path="res://scenes/minigame/countdown_screen.gd" id="13_f8ia8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ly0"]
 bg_color = Color(0, 0, 0, 0.29411766)
 
-[node name="WebsiteMinigame" type="Control"]
-layout_mode = 3
+[node name="MiniGame" type="Panel"]
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_66ly0")
+script = ExtResource("1_x0e2f")
+
+[node name="PlayScreen" type="Control" parent="."]
+visible = false
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,41 +33,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_re4xa")
 
-[node name="Background" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_66ly0")
-
-[node name="Website Background" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 199.0
-offset_top = -37.0
-offset_right = 1071.0
-offset_bottom = 1288.0
+[node name="Website Background" type="TextureRect" parent="PlayScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -436.0
+offset_right = 436.0
+offset_bottom = 1325.0
+grow_horizontal = 2
 texture = ExtResource("2_diy0u")
 expand_mode = 4
 stretch_mode = 1
 
-[node name="Spawn Timer" type="Timer" parent="."]
+[node name="SpawnTimer" type="Timer" parent="PlayScreen"]
 
-[node name="Ad Container" type="Control" parent="."]
+[node name="Ad Container" type="Control" parent="PlayScreen"]
 anchors_preset = 0
 offset_left = 215.0
 offset_top = 120.0
 offset_right = 1070.0
 offset_bottom = 786.0
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="Control" parent="PlayScreen"]
+anchors_preset = 0
 
-[node name="PointAndLivesRect" type="TextureRect" parent="HUD"]
+[node name="PointAndLivesRect" type="TextureRect" parent="PlayScreen/HUD"]
+layout_mode = 0
 offset_left = 22.0
 offset_top = 42.0
 offset_right = 185.0
 offset_bottom = 198.0
 texture = ExtResource("3_kxtkx")
 
-[node name="VBoxPoints" type="VBoxContainer" parent="HUD/PointAndLivesRect"]
+[node name="VBoxPoints" type="VBoxContainer" parent="PlayScreen/HUD/PointAndLivesRect"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -62,21 +75,21 @@ offset_bottom = 70.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="PointsText" type="Label" parent="HUD/PointAndLivesRect/VBoxPoints"]
+[node name="PointsText" type="Label" parent="PlayScreen/HUD/PointAndLivesRect/VBoxPoints"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Points:"
 horizontal_alignment = 1
 
-[node name="PointsLabel" type="Label" parent="HUD/PointAndLivesRect/VBoxPoints"]
+[node name="PointsLabel" type="Label" parent="PlayScreen/HUD/PointAndLivesRect/VBoxPoints"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Points"
 horizontal_alignment = 1
 
-[node name="VBoxLives" type="VBoxContainer" parent="HUD/PointAndLivesRect"]
+[node name="VBoxLives" type="VBoxContainer" parent="PlayScreen/HUD/PointAndLivesRect"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -88,21 +101,21 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="LivesText" type="Label" parent="HUD/PointAndLivesRect/VBoxLives"]
+[node name="LivesText" type="Label" parent="PlayScreen/HUD/PointAndLivesRect/VBoxLives"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Lives:"
 horizontal_alignment = 1
 
-[node name="LivesLabel" type="Label" parent="HUD/PointAndLivesRect/VBoxLives"]
+[node name="LivesLabel" type="Label" parent="PlayScreen/HUD/PointAndLivesRect/VBoxLives"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_diy0u")
 theme_override_font_sizes/font_size = 40
 text = "Lives"
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="PlayScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -113,30 +126,250 @@ mouse_filter = 2
 texture = ExtResource("1_pb5i6")
 stretch_mode = 5
 
-[node name="GameOver" type="Label" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_n4xfe")
+
+[node name="EndScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("8_fnal6")
+
+[node name="Background" type="ColorRect" parent="EndScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 719.0
+grow_horizontal = 2
+color = Color(0.0627451, 0.0627451, 0.24705882, 1)
+
+[node name="GameOverLabel" type="Label" parent="EndScreen/Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.07300001
+offset_left = -46.0
+offset_top = 131.0
+offset_right = 46.0
+offset_bottom = 101.513
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 92
+text = "GAME OVER"
+
+[node name="ScoreLabel" type="Label" parent="EndScreen/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.0
+offset_top = 251.0
+offset_right = 41.0
+offset_bottom = 274.0
+grow_horizontal = 2
+text = "Score: FILL"
+
+[node name="MoneyLabel" type="Label" parent="EndScreen/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = 360.0
+offset_right = 79.0
+offset_bottom = 383.0
+grow_horizontal = 2
+text = "Money Earned: FILL"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EndScreen/Background"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -151.0
+offset_right = 249.5
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="EndScreen/Background/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("9_a6284")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="EndScreen/Background/HBoxContainer/ExitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReviveButton" type="TextureButton" parent="EndScreen/Background/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("10_ic0pd")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="EndScreen/Background/HBoxContainer/ReviveButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Revive: $50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Background" type="ColorRect" parent="StartScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 719.0
+grow_horizontal = 2
+color = Color(0.0627451, 0.0627451, 0.24705882, 1)
+
+[node name="GameOverLabel" type="Label" parent="StartScreen/Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.07300001
+offset_left = -46.0
+offset_top = 131.0
+offset_right = 46.0
+offset_bottom = 101.513
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_diy0u")
+theme_override_font_sizes/font_size = 92
+text = "SCROLLING ADS MINIGAME"
+
+[node name="ScoreLabel" type="Label" parent="StartScreen/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.0
+offset_top = 251.0
+offset_right = 41.0
+offset_bottom = 274.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "close all the ads 
+you have 3 lives"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="StartScreen/Background"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -151.0
+offset_right = 249.5
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="StartButton" type="TextureButton" parent="StartScreen/Background/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("12_n6p53")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartScreen/Background/HBoxContainer/StartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PassButton" type="TextureButton" parent="StartScreen/Background/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("9_a6284")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="StartScreen/Background/HBoxContainer/PassButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "I'll pass this time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CountdownScreen" type="Control" parent="."]
 visible = false
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("13_f8ia8")
+
+[node name="Background" type="ColorRect" parent="CountdownScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 719.0
+grow_horizontal = 2
+color = Color(0.0627451, 0.0627451, 0.24705882, 1)
+
+[node name="ActionLabel" type="Label" parent="CountdownScreen/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -218.5
-offset_top = -84.0
-offset_right = 218.5
-offset_bottom = 84.0
+offset_left = -230.0
+offset_top = -32.0
+offset_right = 230.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.88235295, 0.61960787, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.6963688, 0.16345447, 0.32795486, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("3_diy0u")
-theme_override_font_sizes/font_size = 161
-text = "GAME OVER"
+theme_override_font_sizes/font_size = 92
+text = "Action in : 3..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_n4xfe")
+[connection signal="pressed" from="EndScreen/Background/HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="EndScreen/Background/HBoxContainer/ReviveButton" to="EndScreen" method="_on_revive_button_pressed"]
+[connection signal="pressed" from="StartScreen/Background/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartScreen/Background/HBoxContainer/PassButton" to="." method="_on_pass_button_pressed"]
