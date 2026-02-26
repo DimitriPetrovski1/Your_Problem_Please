@@ -1,6 +1,6 @@
-[gd_scene load_steps=74 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=75 format=3 uid="uid://b5ktasytww183"]
 
-[ext_resource type="Script" uid="uid://bvm2qc4g8au74" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
+[ext_resource type="Script" uid="uid://bclj23gqkx17p" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="FontFile" uid="uid://ck6v0ojfued1d" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
 [ext_resource type="Texture2D" uid="uid://dypfrlw285mk6" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://cxltr6cdm3nk5" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
 [ext_resource type="Script" uid="uid://beubcmxgwrdrc" path="res://scenes/texture_rect.gd" id="7_lovhm"]
 [ext_resource type="Texture2D" uid="uid://mgdljy4ydrat" path="res://assets/UI/Buttons/Blue Button.png" id="8_q73r7"]
-[ext_resource type="Script" uid="uid://c1q337ioe4uj2" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
+[ext_resource type="Script" uid="uid://60qrlrakim21" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
 [ext_resource type="Script" uid="uid://cj2s0hw6xedvw" path="res://scenes/bye_button.gd" id="11_cfo66"]
 [ext_resource type="Script" uid="uid://bnt5j1qu0ff2m" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://bgawgxtd8261b" path="res://scenes/messages_node.gd" id="13_1sg7f"]
@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://bigf0tbun66mc" path="res://scenes/real_life_node.gd" id="15_5my5b"]
 [ext_resource type="Texture2D" uid="uid://b6vp2qu2dnp6f" path="res://assets/misc_sprites/Right Panel - Wooden Desk.png" id="15_e7oxk"]
 [ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="15_lovhm"]
-[ext_resource type="Texture2D" uid="uid://bktpjte0h0eet" path="res://assets/UI/Popup Panels/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
+[ext_resource type="Texture2D" uid="uid://dtfopqk5avkyr" path="res://assets/UI/Popup Panels/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
 [ext_resource type="Texture2D" uid="uid://cnpmbhqmbc3tk" path="res://assets/UI/Popup Panels/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
 [ext_resource type="Script" uid="uid://c10ltaitipn7h" path="res://scenes/accessories.gd" id="20_ypkrs"]
 [ext_resource type="Texture2D" uid="uid://bow0ip6a1lqmk" path="res://assets/rewards/BronzeMedal1.png" id="21_3ggs6"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://uje3m7bwvawn" path="res://assets/rewards/Plant2.png" id="45_ngf18"]
 [ext_resource type="Texture2D" uid="uid://odyljx82hfl" path="res://assets/rewards/Shield1.png" id="46_jima7"]
 [ext_resource type="Texture2D" uid="uid://bqvhkbj66k7kf" path="res://assets/rewards/Pencils1.png" id="48_pjb8r"]
+[ext_resource type="Texture2D" uid="uid://3o62hle6oeur" path="res://assets/misc_sprites/money_sprite.png" id="55_hcajb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ggs6"]
 
@@ -595,6 +596,8 @@ offset_right = 57.5
 offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("3_k3fr3")
 theme_override_font_sizes/font_size = 40
 text = "Submit"
@@ -602,6 +605,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MessagesNode" type="Control" parent="RightPanelContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("13_1sg7f")
 
@@ -726,6 +730,8 @@ offset_right = 57.5
 offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("3_k3fr3")
 theme_override_font_sizes/font_size = 40
 text = "Submit"
@@ -733,7 +739,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RealLifeNode" type="Control" parent="RightPanelContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("15_5my5b")
 
@@ -812,6 +817,7 @@ offset_right = 326.4286
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
+texture_normal = ExtResource("15_lovhm")
 stretch_mode = 0
 
 [node name="RealLifeSubLabel" type="Label" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton"]
@@ -827,6 +833,8 @@ offset_right = 57.5
 offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = ExtResource("3_k3fr3")
 theme_override_font_sizes/font_size = 40
 text = "Submit"
@@ -835,15 +843,19 @@ vertical_alignment = 1
 
 [node name="Money" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1109.0
-offset_top = 604.0
-offset_right = 1263.0
-offset_bottom = 642.0
+offset_left = 1098.0
+offset_top = 609.0
+offset_right = 1291.0
+offset_bottom = 650.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_colors/font_color = Color(0.7882353, 0.38431373, 0, 1)
+theme_override_colors/font_color = Color(0, 0.7254902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 40
 text = "Money Spot"
 script = ExtResource("14_8cuma")
 
@@ -947,6 +959,10 @@ theme_override_font_sizes/font_size = 30
 text = "Email Manual"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MoneySprite" type="Sprite2D" parent="."]
+position = Vector2(1062, 629)
+texture = ExtResource("55_hcajb")
 
 [connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble" method="_on_gameplay_scene_1_graded_solution"]
 [connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]

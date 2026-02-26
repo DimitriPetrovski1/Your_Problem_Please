@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="RealLifeProblem" load_steps=2 format=3 uid="uid://b72j28omiprrd"]
-
-[ext_resource type="Script" uid="uid://cje5tuo4tlokj" path="res://scripts/problems/RealLifeProblem.gd" id="1_xvoej"]
-
-[resource]
-script = ExtResource("1_xvoej")
-description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu sem id dolor efficitur dapibus at varius est. Vestibulum dignissim."
-correct_choices = Array[String](["Charging devices on public USB ports"])
-metadata/_custom_type_script = "uid://bju75grc3ifu"
